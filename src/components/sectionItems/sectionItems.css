@@ -1,0 +1,11 @@
+.category-preview{
+  padding-top: 30px;
+  overflow: hidden;
+}
+
+.category-name {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}

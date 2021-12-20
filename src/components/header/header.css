@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-icons {
+  width: 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
