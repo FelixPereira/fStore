@@ -2,9 +2,9 @@ import React from 'react';
 
 import './customButton.css';
 
-const CustomButton = () => {
+const CustomButton = ({children, productBtn}) => {
   return(
-    <div>teste</div>
+    <button className={`customButton ${productBtn ? 'productBtn' : '' }`}>{children}</button>
   )
 }
 

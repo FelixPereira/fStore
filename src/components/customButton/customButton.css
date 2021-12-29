@@ -1,0 +1,14 @@
+.customButton {
+  background-color: #7554AD;
+  color: #6541A5;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.productBtn {
+  background-color: #ffffff;
+}
