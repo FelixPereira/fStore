@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as HeartIcon } from '../../assets/shopping-bag.svg';
+import { ReactComponent as HeartIcon } from '../../assets/user.svg';
 
 import './item.css';
 
@@ -7,10 +7,9 @@ import CustomButton from '../customButton/CustomButton';
 
 const Item = ({items}) => {
   return(
-    <div className='products-list'>
+    <>
       {
-        items.filter((item, idx) => idx < 5)
-              .map(({id, name, price, productImage}) => (
+        items.map(({id, name, price, productImage}) => (
           <div key={id} className='products-item'>
             <div 
               style={{backgroundImage: `url(${productImage})`}}
@@ -22,7 +21,7 @@ const Item = ({items}) => {
               </div>
               <div className='item-buttons'>
                 <CustomButton productBtn>Comprar</CustomButton>
-                <div className='heartIcon'>
+                <div className='wish-list'>
                   <HeartIcon title='buy' className='heart-icon' />
                 </div>
               </div>
@@ -30,7 +29,7 @@ const Item = ({items}) => {
           </div>
         ))
       }
-    </div>
+    </>
   )
 }
 

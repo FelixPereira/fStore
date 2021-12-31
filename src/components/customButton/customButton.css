@@ -7,8 +7,17 @@
   padding: 5px 15px;
   border: none;
   cursor: pointer;
+  transition: .5s;
 }
 
 .productBtn {
   background-color: #ffffff;
+  color: #6541A5;
+}
+
+.productBtn:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  transition: .5s;
 }
