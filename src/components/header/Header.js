@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import './header.css';
 
@@ -7,17 +8,24 @@ import CartIcon from '../cart-icon/CartIcon';
 import AvatarIcon from '../avatarIcon/AvatarIcon';
 import CartDropdown from '../cartDropdown/CartDropdown';
 
-const Header = () => {
+const Header = ({display}) => {
   return(
     <header className='header'>
       <SearchBar />
       <div className='header-icons'>
         <CartIcon />
         <AvatarIcon />
-        <CartDropdown />
+        {
+          display ? <CartDropdown /> : ''
+        }
       </div>
     </header>
   )
 }
 
-export default Header;
+const mapStateToProps = ({cart: {display}}) => ({
+  display: display
+});
+
+
+export default connect(mapStateToProps)(Header);
