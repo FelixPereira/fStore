@@ -1,0 +1,12 @@
+.cartDropdown {
+  background-color: #f7f7f7;
+  width: 180px;
+  height: 250px;
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  z-index: 2;
+  border-radius: 5px;
+  overflow: scroll;
+  padding: 10px;
+}

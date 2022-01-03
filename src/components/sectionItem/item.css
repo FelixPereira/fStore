@@ -24,6 +24,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
+  z-index: 1;
 }
 
 .product-image:hover{

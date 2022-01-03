@@ -5,6 +5,7 @@ import './header.css';
 import SearchBar from '../searchBar/SearchBar';
 import CartIcon from '../cart-icon/CartIcon';
 import AvatarIcon from '../avatarIcon/AvatarIcon';
+import CartDropdown from '../cartDropdown/CartDropdown';
 
 const Header = () => {
   return(
@@ -13,6 +14,7 @@ const Header = () => {
       <div className='header-icons'>
         <CartIcon />
         <AvatarIcon />
+        <CartDropdown />
       </div>
     </header>
   )
