@@ -1,5 +1,5 @@
 import { cartActionTypes } from './cartActionTypes';
-import { addToCart } from './addItems';
+import { addToCart } from './utilities';
 
 const INITIAL_STATE = {
   display: false,
