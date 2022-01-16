@@ -18,9 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 2200px;
   overflow: hidden;
-  transition: ease-in-out .7s;
 }
 
 .teste {
@@ -28,8 +26,4 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-}
-
-.navigators {
-  margin-left: 100px;
 }

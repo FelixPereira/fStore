@@ -1,18 +1,17 @@
 import React from 'react';
-
 import { ReactComponent as HeartIcon } from '../../assets/user.svg';
 
 import { connect } from 'react-redux';
 
 import './item.css';
-
 import CustomButton from '../customButton/CustomButton';
 import { addItem } from '../../redux/cart/cartActions';
+import { addToWishList } from '../../redux/wishList/wishListAction';
 
-const Item = ({item, addItem}) => {
+const Item = ({item, addItem, addToWishList}) => {
   const {name, price, productImage} = item;
   return(
-    <div className='products-item'>
+    <div className='product-item'>
       <div style={{backgroundImage: `url(${productImage})`}}
             className='product-image' />
       <div className='product-info-container'>
@@ -24,16 +23,17 @@ const Item = ({item, addItem}) => {
           <CustomButton onClick={() => addItem(item)} productBtn>Adicionar
           </CustomButton>
           <div className='wish-list'>
-            <HeartIcon title='buy' className='heart-icon' />
+            <button onClick={() => addToWishList(item)} productBtn>wishlist</button>
           </div>
         </div>
-<button onClick={() => addItem(item)} productBtn>Comprar</button>
+        <button onClick={() => addItem(item)} productBtn>Comprar</button>
       </div>
     </div>
 )}
 
 const mapDispatchToProps = dispatch => ({
-  addItem: item => dispatch(addItem(item))
+  addItem: item => dispatch(addItem(item)),
+  addToWishList: item => dispatch(addToWishList(item))
 })
 
 export default connect(null, mapDispatchToProps)(Item);

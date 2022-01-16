@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+
 
 import './sectionItems.css';
 
@@ -13,7 +13,9 @@ const SectionItems = ({categoryName, items}) => {
       </div>
       <div className='products-list' >
         {
-          items.map(item => (
+          items
+          .filter((items, idx) => idx < 4 )
+          .map(item => (
             <Item item={item} key={item.id}/>
           ))
         }

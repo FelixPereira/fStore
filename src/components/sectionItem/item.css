@@ -1,4 +1,4 @@
-.products-item {
+.product-item {
   background-color: #6541A5;
   border-radius: 10px;
   height: 300px;
@@ -6,8 +6,8 @@
   overflow: hidden;
 }
 
-.products-item:not(:last-child) {
-  margin-right: 15px;
+.product-item:not(:last-child) {
+  margin-right: 2px;
 }
 
 .product-info-container {

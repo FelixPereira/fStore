@@ -1,10 +1,8 @@
 import React from 'react';
 
 import './sectionPreview.css';
-
 import SectionItems from '../sectionItems/SectionItems';
 import Header from '../header/Header';
-
 import PRODUCTS from '../../teste';
 
 
