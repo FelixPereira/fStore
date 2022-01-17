@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import WishListItem from '../wishListItem/wishListItem';
 const WishList = ({wishListItems}) => {
   return(
     <div>
       {
-        wishListItems.map(wishListItem => (
-          <div> { wishListItem.name }</div>
+        wishListItems.map(({name, id, price, productImage}) => (
+          <WishListItem key={id} itemName={name} itemPrice={price} itemImg={productImage}/>
         ))
       }
     </div>

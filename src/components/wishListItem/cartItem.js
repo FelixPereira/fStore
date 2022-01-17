@@ -1,7 +1,7 @@
 import React from 'react';
 import './cartItem.css';
 
-const WishListItem = ({itemName, itemImg, itemPrice}) => {
+const CartItem = ({itemName, itemImg, itemQuantity, itemPrice}) => {
   return(
       <div className='cartItem'>
         <div className='img-container'>
@@ -9,10 +9,10 @@ const WishListItem = ({itemName, itemImg, itemPrice}) => {
         </div>
         <div className='itemI'>
           <p className='itemName'>{itemName}</p>
-          <span className='itemPrice'>{itemPrice}</span>
+          <span className='itemPrice'>{itemQuantity} x {itemPrice}</span>
         </div>
       </div>
     )
 }
 
-export default WishListItem;
+export default CartItem;
