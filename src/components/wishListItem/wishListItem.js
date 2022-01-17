@@ -1,5 +1,5 @@
 import React from 'react';
-import './cartItem.css';
+import './wishListItem.css';
 
 const WishListItem = ({itemName, itemImg, itemPrice}) => {
   return(

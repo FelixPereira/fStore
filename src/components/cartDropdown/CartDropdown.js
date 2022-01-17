@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import './cartDropdown.css';
-import CartItem from '../cartItem/cartItem';
+import SmallItem from '../cartItem/cartItem';
 import CustomButton from '../customButton/CustomButton';
 
 const CartDropdown = ({cartItems}) => {
@@ -11,7 +11,7 @@ const CartDropdown = ({cartItems}) => {
       <div className='cartItems-container'>
         {
           cartItems.map(({name, price, quantity, productImage, id}) => (
-            <CartItem key={id} itemName={name} itemPrice={price} itemQuantity={quantity} itemImg={productImage} />
+            <SmallItem cartItem key={id} itemName={name} itemPrice={price} itemQuantity={quantity} itemImg={productImage} />
           ))
         }
       </div>

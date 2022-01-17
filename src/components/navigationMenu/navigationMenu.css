@@ -1,0 +1,34 @@
+.navigationMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.navigationMenu_logo {
+  width: 120px;
+  height: 50px;
+  background-color: #ffffff;
+  margin-bottom: 35px;
+}
+
+.navigationMenu_links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navigationMenu_links a {
+  color: #9983c4;
+  margin-bottom: 15px;
+}
+
+.navigationMenu_links a:hover{
+  color: #ffffff;
+}
+
+.navigationMenu_links span {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
