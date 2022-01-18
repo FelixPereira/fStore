@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './cartItem.css';
 
 const SmallItem = ({itemName, itemImg, itemQuantity, itemPrice, cartItem}) => {
