@@ -19,11 +19,15 @@
 }
 
 .navigationMenu_links a {
-  color: #9983c4;
+  color: #b7a3da;
   margin-bottom: 15px;
 }
 
 .navigationMenu_links a:hover{
+  color: #ffffff;
+}
+
+.navigationMenu_links a:active{
   color: #ffffff;
 }
 

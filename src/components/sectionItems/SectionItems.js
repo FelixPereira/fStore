@@ -14,7 +14,7 @@ const SectionItems = ({categoryName, items}) => {
       <div className='products-list' >
         {
           items
-          .filter((items, idx) => idx < 4 )
+          .filter((items, idx) => idx < 5 )
           .map(item => (
             <Item item={item} key={item.id}/>
           ))

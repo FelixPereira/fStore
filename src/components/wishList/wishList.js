@@ -3,16 +3,19 @@ import { connect } from 'react-redux';
 
 import './wishList.css';
 
-import SmallItem from '../cartItem/cartItem';
+import SmallItem from '../wishList-cart-item/wishList-Cart-item';
 
 const WishList = ({wishListItems}) => {
   return(
-    <div className='wishListItems'>
-      {
-        wishListItems.map(({name, id, price, productImage}) => (
-          <SmallItem key={id} itemName={name} itemPrice={price} itemImg={productImage}/>
-        ))
-      }
+    <div className='wishList'>
+      <h2 className='wishList-title'>Lista de desejos</h2>
+      <div className='wishListItems'>
+        {
+          wishListItems.map(({name, id, price, productImage}) => (
+            <SmallItem key={id} itemName={name} itemPrice={price} itemImg={productImage}/>
+          ))
+        }
+      </div>
     </div>
   )
 }

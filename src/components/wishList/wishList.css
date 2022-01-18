@@ -1,3 +1,15 @@
+.wishList {
+  height: 40%;
+  overflow: hidden;
+}
+
 .wishListItems {
   overflow-y: scroll;
+  height: 100%;
+}
+
+.wishList-title {
+  color: #fff;
+  margin-bottom: 1.875rem;
+  font-size: 18px;
 }

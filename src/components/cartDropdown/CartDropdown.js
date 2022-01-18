@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import './cartDropdown.css';
-import SmallItem from '../cartItem/cartItem';
+import SmallItem from '../wishList-cart-item/wishList-Cart-item';
 import CustomButton from '../customButton/CustomButton';
 
 const CartDropdown = ({cartItems}) => {
@@ -15,7 +15,7 @@ const CartDropdown = ({cartItems}) => {
           ))
         }
       </div>
-      <CustomButton className='checkoutBtn'>Checkout</CustomButton>
+      <CustomButton productBtn className='checkoutBtn'>Checkout</CustomButton>
     </div>
   )
 }
