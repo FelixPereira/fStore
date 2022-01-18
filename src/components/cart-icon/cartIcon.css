@@ -1,6 +1,6 @@
 .cartIcon{
   background-color: #ffffff;
-  border-radius: 50px;
+  border-radius: 100%;
   width: 30px;
   height: 30px;
   padding: 6px;
@@ -13,13 +13,16 @@
 }
 
 .shoppingBag {
-  height: 24px;
+  height: 23px;
   width: 25px;
+  margin-top: -3px;
 }
 
 .itemCount {
-  position: absolute;
   font-size: 11px;
   font-weight: bold;
-  top: 9px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

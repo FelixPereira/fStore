@@ -12,7 +12,7 @@ const CartIcon = ({ toggleDropdown, itemQuantity}) => {
   return(
     <div className='cartIcon' onClick={toggleDropdown}>
       <ShoppingBag className='shoppingBag' />
-      <span className='itemCount'>{ itemQuantity }</span>
+        <span className='itemCount'>{ itemQuantity }</span>
     </div>
   )
 } 
