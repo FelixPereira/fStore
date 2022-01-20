@@ -1,5 +1,5 @@
 .customButton {
-  background-color: #7554AD;
+  background-color: var(--main-color);
   color: #6541A5;
   font-size: 14px;
   font-weight: bold;

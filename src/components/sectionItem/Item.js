@@ -20,13 +20,11 @@ const Item = ({item, addItem, addToWishList}) => {
           <span className='product-price'>{price}</span>
         </div>
         <div className='item-buttons'>
-          <CustomButton onClick={() => addItem(item)} productBtn>Adicionar
-          </CustomButton>
-          <div className='wish-list'>
-            <button onClick={() => addToWishList(item)} productBtn>wishlist</button>
+          <CustomButton productBtn onClick={() => addItem(item)}>Adicionar</CustomButton>
+          <div onClick={() => addToWishList(item)} className='wish-list'>
+            <img className='heart-icon' src="/images/shop-img/hats/palm-tree-cap.png" alt="" />
           </div>
         </div>
-        <button onClick={() => addItem(item)} productBtn>Comprar</button>
       </div>
     </div>
 )}
