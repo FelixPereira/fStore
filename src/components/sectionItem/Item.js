@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as HeartIcon } from '../../assets/user.svg';
+import { ReactComponent as HeartIcon } from '../../assets/heart.svg';
 
 import { connect } from 'react-redux';
 
@@ -22,7 +22,7 @@ const Item = ({item, addItem, addToWishList}) => {
         <div className='item-buttons'>
           <CustomButton productBtn onClick={() => addItem(item)}>Adicionar</CustomButton>
           <div onClick={() => addToWishList(item)} className='wish-list'>
-            <img className='heart-icon' src="/images/shop-img/hats/palm-tree-cap.png" alt="" />
+            <HeartIcon className='heart-icon' />
           </div>
         </div>
       </div>
