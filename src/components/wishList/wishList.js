@@ -11,7 +11,9 @@ const WishList = ({wishListItems}) => {
       <h2 className='wishList-title'>Lista de desejos</h2>
       <div className='wishListItems'>
         {
-          wishListItems.map(({name, id, price, productImage}) => (
+          wishListItems
+          .filter((wishListItem, idx) => idx < 6)
+          .map(({name, id, price, productImage}) => (
             <SmallItem key={id} itemName={name} itemPrice={price} itemImg={productImage}/>
           ))
         }

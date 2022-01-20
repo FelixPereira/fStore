@@ -20,6 +20,20 @@
   margin-bottom: 25px;
 }
 
+.cartItems-container::-webkit-scrollbar {
+  width: 12px;  /* width of the entire scrollbar */
+}
+
+.cartItems-container::-webkit-scrollbar-track {
+  background: #fff;  /* color of the tracking area */
+}
+
+.cartItems-container::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #fff;  /* creates padding around scroll thumb */
+}
+
 .empty-message {
   color: #fff;
   margin: 50px auto;

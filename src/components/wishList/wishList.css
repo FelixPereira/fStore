@@ -1,15 +1,28 @@
 .wishList {
   height: 40%;
-  overflow: hidden;
 }
 
 .wishListItems {
   overflow-y: scroll;
-  height: 100%;
+  height: 80%;
 }
 
 .wishList-title {
   color: #fff;
   margin-bottom: 1.875rem;
   font-size: 18px;
+}
+
+.wishListItems::-webkit-scrollbar {
+  width: 12px;  /* width of the entire scrollbar */
+}
+
+.wishListItems::-webkit-scrollbar-track {
+  background: #fff;  /* color of the tracking area */
+}
+
+.wishListItems::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #fff;  /* creates padding around scroll thumb */
 }
