@@ -7,7 +7,7 @@
   right: 0px;
   z-index: 2;
   border-radius: 5px;
-  padding: 25px 15px;
+  padding: 30px 15px;
   display: flex;
   flex-direction: column;
   border: solid 1px #fff;
@@ -20,5 +20,4 @@
 }
 
 .checkoutBtn {
-  width: 80%;
 }
