@@ -11,13 +11,17 @@ import CustomButton from '../customButton/CustomButton';
 const CartDropdown = ({cartItems}) => {
   return(
     <div className='cartDropdown'>
-      <div className='cartItems-container'>
-        {
-          cartItems.map(({name, price, quantity, productImage, id}) => (
-            <SmallItem cartItem key={id} itemName={name} itemPrice={price} itemQuantity={quantity} itemImg={productImage} />
-          ))
-        }
-      </div>
+      {
+        cartItems.length 
+        ? <div className='cartItems-container'>
+            {
+              cartItems.map(({name, price, quantity, productImage, id}) => (
+              <SmallItem cartItem key={id} itemName={name} itemPrice={price} itemQuantity={quantity} itemImg={productImage} />
+              ))
+            }
+          </div>
+        : <span className='empty-message'>O carrinho está vazio</span>
+      } 
       <CustomButton productBtn >Checkout</CustomButton>
     </div>
   )
