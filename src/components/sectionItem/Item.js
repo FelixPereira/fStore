@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactComponent as HeartIcon } from '../../assets/heart.svg';
+import { ReactComponent as CartIcon } from '../../assets/shopping-bag.svg';
 
 import { connect } from 'react-redux';
 
@@ -20,7 +21,7 @@ const Item = ({item, addItem, addToWishList}) => {
           <span className='product-price'>{price}</span>
         </div>
         <div className='item-buttons'>
-          <CustomButton productBtn onClick={() => addItem(item)}>Adicionar</CustomButton>
+          <CustomButton productBtn onClick={() => addItem(item)}>Adicionar ao carrinho</CustomButton>
           <div onClick={() => addToWishList(item)} className='wish-list'>
             <HeartIcon className='heart-icon' />
           </div>

@@ -1,5 +1,4 @@
 .sideBar {
-  width: 15%;
   border-right: 5px solid #2b2040;
   background-color: #582dd3;
   padding: 30px;
@@ -7,4 +6,24 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  display: none;
 }
+
+@media screen and (min-width: 900px) {
+  .sideBar {
+    display: block;
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+.sideBar {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .sideBar {
+      width: 15%;
+    }
+  }

@@ -3,12 +3,7 @@
   background-color: var(--main-color);
   border-radius: 10px;
   height: 300px;
-  width: 220px;
   overflow: hidden;
-}
-
-.product-item:not(:last-child) {
-  margin-right: 2px;
 }
 
 .product-info-container {
@@ -59,7 +54,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
-  width: 80%;
+  width: 100%;
 }
 
 .wish-list {

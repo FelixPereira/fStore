@@ -1,5 +1,11 @@
 .sectionsPreview {
-  background-color: var(--dark-bg);
-  width: 85%;
-  padding: 0 30px;
+  background-color: var(--dark-bg); 
+  padding: 30px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .sectionsPreview {
+    width: 85%;
+  }
 }
