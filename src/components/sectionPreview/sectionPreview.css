@@ -4,7 +4,19 @@
   width: 100%;
 }
 
+@media screen and (min-width: 900px) {
+  .sectionsPreview {
+    width: 70%;
+  }
+}
+
 @media screen and (min-width: 1024px) {
+  .sectionsPreview {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1150px) {
   .sectionsPreview {
     width: 85%;
   }

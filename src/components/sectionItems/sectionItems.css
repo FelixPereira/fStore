@@ -28,12 +28,13 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
   .products-list {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
-@media screen and (min-width: 1024px) {
+
+@media screen and (min-width: 1150px) {
   .products-list {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
