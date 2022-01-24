@@ -16,9 +16,10 @@ import { selectDisplay } from '../../redux/cart/cartSelectors';
 const Header = ({display}) => {
   return(
     <header className='header'>
-      <Icon>
-      <CartIcon />
-      </Icon>
+      <div className='icon-container'>
+        <HumburgerMenu className='icon' />
+      </div>
+
       <SearchBar />
       <div className='header-icons'>
         <CartIcon />

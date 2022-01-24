@@ -22,9 +22,9 @@ const Item = ({item, addItem, addToWishList}) => {
         </div>
         <div className='item-buttons'>
           <CustomButton productBtn onClick={() => addItem(item)}>Adicionar ao carrinho</CustomButton>
-          <div onClick={() => addToWishList(item)} className='icon-container'>
-            <HeartIcon className='icon' />
-          </div>
+         <div onClick={() => addToWishList(item)} className='icon-container'>
+            <HeartIcon className='icon' /> 
+          </div> 
         </div>
       </div>
     </div>

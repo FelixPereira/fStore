@@ -34,7 +34,7 @@
   }
 }
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1250px) {
   .products-list {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }

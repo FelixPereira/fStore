@@ -1,12 +1,12 @@
 .sectionsPreview {
   background-color: var(--dark-bg); 
-  padding: 30px;
+  padding: 20px;
   width: 100%;
 }
 
 @media screen and (min-width: 900px) {
   .sectionsPreview {
-    width: 70%;
+    width: 75%;
   }
 }
 
@@ -16,7 +16,7 @@
   }
 }
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1250px) {
   .sectionsPreview {
     width: 85%;
   }

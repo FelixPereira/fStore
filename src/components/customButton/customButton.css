@@ -2,10 +2,10 @@
   background-color: var(--main-color);
   font-family: 'Dosis', sans-serif;
   color: var(--main-color);
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: bold;
-  border-radius: 5px;
-  padding: 5px 15px;
+  border-radius: 0.3125rem;
+  padding: 0.3125rem 0.9375rem;
   border: none;
   cursor: pointer;
   transition: .5s;
@@ -14,12 +14,10 @@
 .productBtn {
   background-color: #ffffff;
   color: var(--main-color);
+
 }
 
 .productBtn:hover {
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #ffffff;
+  transform: translateY(3px);
   transition: .3s;
-  font-size: 14px;
 }

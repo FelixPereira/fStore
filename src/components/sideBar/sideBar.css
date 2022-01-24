@@ -12,7 +12,7 @@
 @media screen and (min-width: 900px) {
   .sideBar {
     display: block;
-    width: 30%;
+    width: 25%;
   }
 }
 
@@ -22,8 +22,8 @@
   }
 }
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1250px) {
   .sideBar {
-      width: 15%;
-    }
+    width: 15%;
   }
+}
