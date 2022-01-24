@@ -6,42 +6,42 @@ import './navigationMenu.css';
 const NavigatioMenu = () => {
   return(
     <div className='navigationMenu'>
-      <a className='navigationMenu_logo'>
+      <NavLink to='/' className='navigationMenu_logo'>
         <img src='yyeye' alt='Logo' />
-      </a>
-      <nav className='navigationMenu_NavNavLinks'>
+      </NavLink>
+      <nav className='navigationMenu_links'>
         <ul>
           <li>
-            <NavLink to='/'  style={
-              ({isActive}) => isActive ? {color: 'red'} : {color: '#000'} 
+            <NavLink to='/' className='naviLink' style={
+              ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
               <span>01</span>Home
             </NavLink>
           </li>
           <li>
-          <NavLink to='/' style={
-            ({isActive}) => isActive ? {color: '#fff'} : {color: '#000'} 
+            <NavLink to='/loja' className='naviLink' style={
+            ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
           }>
             <span>02</span>Loja 
           </NavLink>
           </li>
           <li>
-            <NavLink to='/' style={
-              ({isActive}) => isActive ? {color: '#fff'} : {color: '#000'} 
+            <NavLink to='/masculino' className='naviLink' style={
+              ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
               <span>03</span>Masculino 
             </NavLink>
           </li>
           <li>
-            <NavLink to='/' style={
-              ({isActive}) => isActive ? {color: '#fff'} : {color: '#000'} 
+            <NavLink to='/feminino' className='naviLink' style={
+              ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
               <span>04</span>Feminino
             </NavLink>
           </li>
           <li>
-            <NavLink to='/' style={
-              ({isActive}) => isActive ? {color: '#fff'} : {color: '#000'} 
+            <NavLink to='/contacto' className='naviLink' style={
+              ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
               <span>06</span>Contacto
             </NavLink>

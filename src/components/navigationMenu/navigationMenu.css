@@ -18,17 +18,17 @@
   justify-content: space-between;
 }
 
-.navigationMenu_links a {
+.navigationMenu_links ul {
+  list-style: none;
+}
+
+.navigationMenu_links li {
+  margin-bottom: 0.9375rem;
+}
+
+.navigationMenu_links .naviLink{
   color: #b7a3da;
-  margin-bottom: 15px;
-}
-
-.navigationMenu_links a:hover{
-  color: #ffffff;
-}
-
-.navigationMenu_links a:active{
-  color: #ffffff;
+  text-decoration: none;
 }
 
 .navigationMenu_links span {
