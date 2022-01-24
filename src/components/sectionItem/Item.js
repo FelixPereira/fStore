@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactComponent as HeartIcon } from '../../assets/heart.svg';
-import { ReactComponent as CartIcon } from '../../assets/shopping-bag.svg';
+import { ReactComponent as ViewProduct } from '../../assets/view.svg';
 
 import { connect } from 'react-redux';
 
@@ -20,12 +20,13 @@ const Item = ({item, addItem, addToWishList}) => {
           <h3 className='product-name'>{name}</h3>
           <span className='product-price'>{price}</span>
         </div>
-        <div className='item-buttons'>
+        <div className='cartToCart-btn'>
           <CustomButton productBtn onClick={() => addItem(item)}>Adicionar ao carrinho</CustomButton>
-         <div onClick={() => addToWishList(item)} className='icon-container'>
-            <HeartIcon className='icon' /> 
-          </div> 
         </div>
+      </div>
+      <div className='icons'>
+        <HeartIcon title='Adicionar à lista de desejos' className='icon' onClick={() => addToWishList(item)}/> 
+        <ViewProduct className='icon' onClick={() => addToWishList(item)}/> 
       </div>
     </div>
 )}
