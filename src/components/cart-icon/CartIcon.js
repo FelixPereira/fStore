@@ -10,8 +10,8 @@ import { selectCartQuantity } from '../../redux/cart/cartSelectors';
 
 const CartIcon = ({ toggleDropdown, itemQuantity}) => {
   return(
-    <div className='cartIcon' onClick={toggleDropdown}>
-      <ShoppingBag className='shoppingBag' />
+    <div className='icon-container' onClick={toggleDropdown}>
+      <ShoppingBag className='icon' />
         <span className='itemCount'>{ itemQuantity }</span>
     </div>
   )

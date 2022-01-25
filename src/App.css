@@ -28,3 +28,26 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 3px solid var(--main-color);  /* creates padding around scroll thumb */
 }
+
+/* Icons */
+
+.icon-container{
+  background-color: #ffffff;
+  border-radius: 100%;
+  width: 28px;
+  height: 28px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  position: relative;
+}

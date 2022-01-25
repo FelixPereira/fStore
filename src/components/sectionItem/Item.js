@@ -1,13 +1,14 @@
 import React from 'react';
 import { ReactComponent as HeartIcon } from '../../assets/heart.svg';
 import { ReactComponent as ViewProduct } from '../../assets/view.svg';
-
 import { connect } from 'react-redux';
-
-import './item.css';
-import CustomButton from '../customButton/CustomButton';
 import { addItem } from '../../redux/cart/cartActions';
 import { addToWishList } from '../../redux/wishList/wishListAction';
+
+import './item.css';
+
+import CustomButton from '../customButton/CustomButton';
+
 
 const Item = ({item, addItem, addToWishList}) => {
   const {name, price, productImage} = item;
@@ -24,9 +25,11 @@ const Item = ({item, addItem, addToWishList}) => {
           <CustomButton productBtn onClick={() => addItem(item)}>Adicionar ao carrinho</CustomButton>
         </div>
       </div>
-      <div className='icons'>
-        <HeartIcon title='Adicionar à lista de desejos' className='icon' onClick={() => addToWishList(item)}/> 
-        <ViewProduct className='icon' onClick={() => addToWishList(item)}/> 
+      <div className='icons-container'>
+        <HeartIcon className='icon wishlist' onClick={() => addToWishList(item)} />
+          <span className='tooltip tooltip-wishlist'>Adicionar aos favoritos</span>
+        <ViewProduct className='icon view-product' onClick={() => addToWishList(item)}/>
+          <span className='tooltip tooltip-view'>Ver os detalhes</span> 
       </div>
     </div>
 )}
