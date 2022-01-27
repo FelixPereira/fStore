@@ -31,10 +31,6 @@ const Item = ({item, addItem, addToWishList}) => {
         <ViewProduct className='icon view-product' onClick={() => addToWishList(item)}/>
           <span className='tooltip tooltip-view'>Ver os detalhes</span> 
       </div>
-
-      <div class="tooltip">Hover over me
-        <span class="tooltiptext">Tooltip text</span>
-      </div>
     </div>
 )}
 
