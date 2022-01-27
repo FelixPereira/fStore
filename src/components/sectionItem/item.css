@@ -66,26 +66,27 @@
   width: 50px;
   height: 95px;
   background-color: #ffffff;
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  position: relative;
+/*   top: 10px;
+  left: 10px; */
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 15px 3px;
-  transform: translateX(-500px);
-  transition: ease-in-out .6s;
+/*  transform: translateX(-500px);
+  transition: ease-in-out .6s; */
 }
 
+/*
 .product-item:hover .icons-container {
   transform: translateX(0px);
-  transition: ease-in-out .3s;
+  transition: ease-in-out .3s; 
 }
+*/
 
-.tooltip-wishlist,
-.tooltip-view {
+.tooltip {
   background-color: var(--main-color);
   color: #ffffff;
   padding: 10px;
@@ -96,24 +97,41 @@
   white-space: nowrap;
   border-radius: 5px;
   font-weight: bold;
-  display: none;
+
 }
 
 .tooltip-view {
   top: 70px;
 }
 
-
-.wishlist:hover .tooltip-wishlist {
-  display: block;
-}
-
-.view-product:hover .tooltip-view {
-  display: block;
+.view-product:hover .tooltip {
+  visibility: visible;
 }
 
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 
 /* Resonsiveness with media queries 
 
