@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactComponent as HeartIcon } from '../../assets/heart.svg';
-import { ReactComponent as ViewProduct } from '../../assets/view.svg';
+import { ReactComponent as ViewProduct } from '../../assets/eye.svg';
 import { connect } from 'react-redux';
 import { addItem } from '../../redux/cart/cartActions';
 import { addToWishList } from '../../redux/wishList/wishListAction';

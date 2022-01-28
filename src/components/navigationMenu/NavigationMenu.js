@@ -1,4 +1,5 @@
 import React from 'react';
+// import { ReactComponent as Logo } from '../../assets/logo.svg';
 import { NavLink } from 'react-router-dom'; 
 
 import './navigationMenu.css';
@@ -7,8 +8,9 @@ const NavigatioMenu = () => {
   return(
     <div className='navigationMenu'>
       <NavLink to='/' className='navigationMenu_logo'>
-        <img src='yyeye' alt='Logo' />
+        <img src='/logo.png' alt='Logotipo' />
       </NavLink>
+
       <nav className='navigationMenu_links'>
         <ul>
           <li>

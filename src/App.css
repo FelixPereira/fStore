@@ -42,7 +42,6 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   position: relative;
   cursor: pointer;
-  margin-right: 10px;
 }
 
 .icon {
