@@ -4,6 +4,7 @@ import { ReactComponent as AvatarIcon } from '../../assets/user.svg';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectDisplay } from '../../redux/cart/cartSelectors';
+import { toggleSidebar } from '../../redux/sidebar/sidebarActions';
 
 import './header.css';
 
@@ -12,10 +13,10 @@ import CartIcon from '../cart-icon/CartIcon';
 import CartDropdown from '../cartDropdown/CartDropdown';
 
 
-const Header = ({display}) => {
+const Header = ({display, toggleSidebar}) => {
   return(
     <header className='header'>
-      <div className='humburger-icon'>
+      <div className='humburger-icon' onClick={toggleSidebar}>
         <div className='icon-container'>
           <HumburgerMenu className='icon' />
         </div>
@@ -40,5 +41,9 @@ const mapStateToProps = createStructuredSelector({
   display: selectDisplay
 });
 
+const mapDispatchToProps = dispatch => ({
+  toggleSidebar: () => dispatch(toggleSidebar())
+});
 
-export default connect(mapStateToProps)(Header);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

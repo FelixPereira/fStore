@@ -3,6 +3,7 @@ import React from 'react';
 import './sectionPreview.css';
 import SectionItems from '../sectionItems/SectionItems';
 import Header from '../header/Header';
+import Backdrop from '../backdrop/backdrop';
 import PRODUCTS from '../../teste';
 
 
@@ -11,13 +12,12 @@ const SectionPreview = () => {
   
   return(
     <div className='sectionsPreview'>
-      <div className='backdrop' />
       <Header />
       {
         products
-          .filter((product, idx) => idx < 2)
+          .filter((product, idx) => idx < 3)
           .map(({categoryName, items}, id) => (
-            <SectionItems categoryName={categoryName} items={items} key={products.id}/>
+            <SectionItems categoryName={categoryName} items={items} key={id}/>
         ))
       }
     </div>

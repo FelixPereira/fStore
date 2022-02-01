@@ -19,10 +19,6 @@
   transition: ease-in .5s;
 }
 
-.sidebar--hidden {
-  display: none;
-}
-
 @media screen and (min-width: 900px) {
   .sideBar {
     display: block;
