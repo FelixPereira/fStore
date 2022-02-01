@@ -22,7 +22,7 @@ const WishList = ({wishListItems}) => {
   )
 }
 
-export const mapStateToProps = ({wishList: {wishListItems}}) => ({
+const mapStateToProps = ({wishList: {wishListItems}}) => ({
   wishListItems: wishListItems
 });
 

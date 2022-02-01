@@ -2,6 +2,7 @@
   border-right: 5px solid #2b2040;
   background-color: #582dd3;
   padding: 30px;
+  width: 45%;
   display: font;
   flex-direction: column;
   justify-content: space-between;
@@ -16,7 +17,7 @@
 
 .sidebar--visible {
   transform: translateX(0);
-  transition: ease-in .5s;
+  transition: ease-in .3s;
 }
 
 @media screen and (min-width: 900px) {
