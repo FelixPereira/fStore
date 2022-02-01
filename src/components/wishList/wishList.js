@@ -12,7 +12,7 @@ const WishList = ({wishListItems}) => {
       <div className='wishListItems'>
         {
           wishListItems
-          .filter((wishListItem, idx) => idx < 6)
+          .filter((wishListItem, idx) => idx < 10)
           .map(({name, id, price, productImage}) => (
             <SmallItem key={id} itemName={name} itemPrice={price} itemImg={productImage}/>
           ))

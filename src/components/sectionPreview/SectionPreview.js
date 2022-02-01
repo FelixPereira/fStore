@@ -11,6 +11,7 @@ const SectionPreview = () => {
   
   return(
     <div className='sectionsPreview'>
+      <div className='backdrop' />
       <Header />
       {
         products

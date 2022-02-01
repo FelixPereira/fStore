@@ -6,6 +6,20 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  transform: translateX(-300px);
+  transition: ease-in-out .3s;
+}
+
+.sidebar--visible {
+  transform: translateX(0);
+  transition: ease-in .5s;
+}
+
+.sidebar--hidden {
   display: none;
 }
 
