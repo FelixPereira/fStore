@@ -1,10 +1,10 @@
 .wishList {
-  height: 20%;
+  height: 40%;
 }
 
 .wishListItems {
   overflow-y: scroll;
-  height: 10%;
+  height: 100%;
 }
 
 .wishList-title {
