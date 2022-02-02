@@ -2,23 +2,28 @@
   border-right: 5px solid #2b2040;
   background-color: #582dd3;
   padding: 30px;
-  width: 45%;
   display: font;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  transform: translateX(-300px);
-  transition: ease-in-out .3s;
 }
 
-.sidebar--visible {
+
+@media screen and (max-width: 899px) {
+  .sideBar {
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    transform: translateX(-300%);
+    transition: ease-in-out .3s;
+  }
+
+  .sidebar--visible {
   transform: translateX(0);
   transition: ease-in .3s;
+  }
 }
+
 
 @media screen and (min-width: 900px) {
   .sideBar {

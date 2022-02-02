@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectDisplay } from '../../redux/sidebar/sidebarSelector';
+import { toggleSidebar } from '../../redux/sidebar/sidebarActions';
 
 import './sectionPreview.css';
 import SectionItems from '../sectionItems/SectionItems';
@@ -11,13 +12,13 @@ import PRODUCTS from '../../teste';
 
 
 
-const SectionPreview = ({displaySidebar}) => {
+const SectionPreview = ({displaySidebar, toggleSidebar}) => {
   const products = PRODUCTS;
   
   return(
     <div className='sectionsPreview'>
       { displaySidebar 
-        ? <Backdrop />
+        ? <Backdrop onClick={toggleSidebar} />
         : ''}
       <Header />
       {
@@ -35,4 +36,8 @@ const mapStateToProps = createStructuredSelector({
   displaySidebar: selectDisplay
 });
 
-export default connect(mapStateToProps)(SectionPreview);
+const mapDispatchToProps = dispatch => ({
+  toggleSidebar: () => dispatch(toggleSidebar())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SectionPreview);
