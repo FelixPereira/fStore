@@ -6,7 +6,6 @@ import './searchBar.css';
 const SearchBar = () => {
   return(
     <div className='searchBar'>
-      <SearchIcon className='searchIcon' />
       
       <input 
         className='searchInput'
