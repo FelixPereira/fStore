@@ -1,4 +1,4 @@
-.sectionsPreview {
+.maincontent {
   background-color: var(--dark-bg); 
   padding: 30px;
   width: 100%;
@@ -6,19 +6,19 @@
 }
 
 @media screen and (min-width: 900px) {
-  .sectionsPreview {
+  .maincontent {
     width: 75%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .sectionsPreview {
+  .maincontent {
     width: 80%;
   }
 }
 
 @media screen and (min-width: 1250px) {
-  .sectionsPreview {
+  .maincontent {
     width: 85%;
   }
 }

@@ -13,7 +13,6 @@ const HomePage = () => {
       <Outlet />
     </div>
   )
-}
-
+};
 
 export default HomePage;

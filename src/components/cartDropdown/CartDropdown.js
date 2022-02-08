@@ -25,7 +25,6 @@ const CartDropdown = ({cartItems}) => {
         : <span className='empty-message'>O carrinho está vazio</span>
       } 
       <CustomButton onClick={() => navigate('/cartpage')} productBtn >Checkout</CustomButton>
-      <Link to='cartpage'>vart</Link>
     </div>
   )
 }

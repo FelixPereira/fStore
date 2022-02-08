@@ -14,17 +14,17 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={ <HomePage /> } >
-        <Route path='' element={<MainContent /> }>
-          <Route path='' element={<SectionPreview />} />
-          <Route path='cartpage' element={<CartPage />} />
-          <Route path='loja' element={<CartPage />} />
-          <Route path='categoria/:categoryId' element={<CartPage />} />
-          <Route path='cartpage' element={<CartPage />} />
-          <Route path='cartpage' element={<CartPage />} />
+        <Route path='' element={ <MainContent /> }>
+          <Route path='' element={ <SectionPreview />} />
+          <Route path='cartpage' element={ <CartPage />} />
+          <Route path='loja' element={ <CartPage />} />
+          <Route path='categoria/:categoryId' element={ <CartPage />} />
+          <Route path='contacto' element={ <CartPage />} />
+          <Route path='signin' element={ <CartPage />} />
         </Route>
       </Route>
     </Routes>
   )
-}
+};
 
 export default App;
