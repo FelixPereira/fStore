@@ -13,13 +13,13 @@ import Backdrop from '../backdrop/backdrop';
 
 const Section = ({displaySidebar, toggleSidebar}) => {
   return(
-    <div className='sectionsPreview'>
+    <main className='sectionsPreview'>
       { displaySidebar 
         ? <Backdrop onClick={toggleSidebar} />
         : ''}
       <Header />
       <Outlet />
-    </div>
+    </main>
   )
 };
 
