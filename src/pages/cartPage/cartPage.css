@@ -1,13 +1,15 @@
 .checkout {
   width: 800px;
+  padding-top: 50px;
   margin: 0 auto;
+  height: 100%;
 }
 
 .checkout-header {
   color: #fff;
   background-color: #582DD3;
   border-radius: 20px 20px 0 0;
-  padding: 10px 40px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,44 +17,50 @@
 }
 
 .checkout-body {
-  border-radius: 0 0 020px 20px;
-  padding: 10px 40px;
+  border-radius: 0 0 5px 5px;
+  padding: 40px;
   background-color: #fff;
+}
+
+.checkout-icon {
+  cursor: pointer;
+}
+
+.subtotal {
+  text-align: right;
+  margin-top: 3.125rem;
 }
 
 .producti {
   width: 30%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .producti img {
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  border-radius: 10%;
+  margin-right: 10px;
 }
 
 .productName {
   width: 200px;
-
 }
 
 .productQuantity {
-  width: 90px;
+  width: 10%;
   display: flex;
   justify-content: space-between;
 }
 
-
-.product-price {
-  width: 100px;
+.productPrice {
+  width: 20%;
 }
 
 .product-remove {
   width: 70px;
 }
-
 
 .product-img--container img {
   width: 60px;

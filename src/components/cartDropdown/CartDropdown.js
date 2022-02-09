@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { selectCartItems } from '../../redux/cart/cartSelectors';
 
@@ -17,7 +17,7 @@ const CartDropdown = ({cartItems}) => {
         cartItems.length 
         ? <div className='cartItems-container'>
             {
-              cartItems.map(({name, price, quantity, productImage, id}) => (
+              cartItems.map(({name, price, quantity, productImage}, id) => (
               <SmallItem cartItem key={id} itemName={name} itemPrice={price} itemQuantity={quantity} itemImg={productImage} />
               ))
             }
