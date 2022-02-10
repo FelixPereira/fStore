@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactComponent as HeartIcon } from '../../assets/heart.svg';
 import { ReactComponent as ViewProduct } from '../../assets/eye.svg';
 import { connect } from 'react-redux';
-import { addItem } from '../../redux/cart/cartActions';
+import { addItemToCart } from '../../redux/cart/cartActions';
 import { addToWishList } from '../../redux/wishList/wishListAction';
 
 import './item.css';
@@ -10,7 +10,7 @@ import './item.css';
 import CustomButton from '../customButton/CustomButton';
 
 
-const Item = ({item, addItem, addToWishList}) => {
+const Item = ({item, addItemToCart, addToWishList}) => {
   const {name, price, productImage} = item;
   return(
     <div className='product-item'>
@@ -22,7 +22,7 @@ const Item = ({item, addItem, addToWishList}) => {
           <span className='product-price'>{price}</span>
         </div>
         <div className='cartToCart-btn'>
-          <CustomButton productBtn onClick={() => addItem(item)}>Adicionar ao carrinho</CustomButton>
+          <CustomButton productBtn onClick={() => addItemToCart(item)}>Adicionar ao carrinho</CustomButton>
         </div>
       </div>
       <div className='icons-container'>
@@ -35,7 +35,7 @@ const Item = ({item, addItem, addToWishList}) => {
 )}
 
 const mapDispatchToProps = dispatch => ({
-  addItem: item => dispatch(addItem(item)),
+  addItemToCart: item => dispatch(addItemToCart(item)),
   addToWishList: item => dispatch(addToWishList(item))
 })
 

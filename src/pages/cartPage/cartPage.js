@@ -2,11 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectCartItems } from '../../redux/cart/cartSelectors';
-import { addItem, deleteFromCart } from '../../redux/cart/cartActions';
+import { 
+  addItemToCart, 
+  deleteItemFromCart,
+  decreaseItemQuantity } from '../../redux/cart/cartActions';
 
 import './cartPage.css';
 
-const CartPage = ({cartItems, addItem, deleteFromCart}) => {
+const CartPage = ({cartItems, 
+  addItemToCart, 
+  deleteItemFromCart,
+  decreaseItemQuantity}) => {
   return(
     <div className='checkout'>
       <div className='checkout-header'>
@@ -37,11 +43,13 @@ const CartPage = ({cartItems, addItem, deleteFromCart}) => {
                 </div>
              
                 <div className='productQuantity'>
-                  <span className='checkout-icon'>&#10094;</span>
+                  <span 
+                    className='checkout-icon'
+                    onClick={() => decreaseItemQuantity(cartItem)}>&#10094;</span>
                   <span>{quantity}</span>
                   <span 
                     className='checkout-icon'
-                    onClick={() => addItem(cartItem)}>&#10095;</span>
+                    onClick={() => addItemToCart(cartItem)}>&#10095;</span>
                 </div>
 
                 <div className='productPrice'>
@@ -51,7 +59,7 @@ const CartPage = ({cartItems, addItem, deleteFromCart}) => {
                 <div className='btn-romove'>
                 <span 
                   className='checkout-icon'
-                  onClick={() => deleteFromCart(cartItem)}>&#10005;</span>
+                  onClick={() => deleteItemFromCart(cartItem)}>&#10005;</span>
                 </div>
             </div>
             )
@@ -70,8 +78,9 @@ const mapStateToProps = createStructuredSelector({
 });
 
 const mapDispatchToProps = dispatch => ({
-  addItem: cartItem => dispatch(addItem(cartItem)),
-  deleteFromCart: cartItem => dispatch(deleteFromCart(cartItem))
+  addItemToCart: cartItem => dispatch(addItemToCart(cartItem)),
+  deleteItemFromCart: cartItem => dispatch(deleteItemFromCart(cartItem)),
+  decreaseItemQuantity: cartItem => dispatch(decreaseItemQuantity(cartItem))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartPage);
