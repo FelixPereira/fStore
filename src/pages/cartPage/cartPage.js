@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { selectCartItems } from '../../redux/cart/cartSelectors';
+import { selectCartItems, selectTotal } from '../../redux/cart/cartSelectors';
 import { 
   addItemToCart, 
   deleteItemFromCart,
@@ -9,10 +9,14 @@ import {
 
 import './cartPage.css';
 
-const CartPage = ({cartItems, 
+const CartPage = ({
+  cartItems, 
   addItemToCart, 
   deleteItemFromCart,
-  decreaseItemQuantity}) => {
+  decreaseItemQuantity,
+  total
+  }) => {
+    console.log(total)
   return(
     <div className='checkout'>
       <div className='checkout-header'>
@@ -66,7 +70,7 @@ const CartPage = ({cartItems,
           })
         }
         <div className='subtotal'>
-          <h2>Total: 1000 Kz</h2>
+          <h2>Total: {total} Kz</h2>
       </div>
       </div>
     </div>
@@ -74,7 +78,8 @@ const CartPage = ({cartItems,
 };
 
 const mapStateToProps = createStructuredSelector({
-  cartItems: selectCartItems
+  cartItems: selectCartItems,
+  total: selectTotal
 });
 
 const mapDispatchToProps = dispatch => ({
