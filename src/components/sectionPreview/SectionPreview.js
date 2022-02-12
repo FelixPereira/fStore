@@ -8,7 +8,7 @@ const SectionPreview = ({displaySidebar, toggleSidebar}) => {
   const products = PRODUCTS;
   
   return(
-    <div className=''>
+    <div className='collections-preview'>
       {
         products
           .filter((product, idx) => idx < 3)

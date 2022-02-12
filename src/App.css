@@ -13,6 +13,7 @@
 
 body {
   font-family: 'Dosis', sans-serif;
+  background-color: var(--dark-bg); 
 }
 
 body::-webkit-scrollbar {

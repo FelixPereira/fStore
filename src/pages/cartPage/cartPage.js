@@ -27,7 +27,7 @@ const CartPage = ({
           <h4>Quantidade</h4>
         </div>
         <div className='productPrice'>
-          <h4>Preço</h4>
+          <h4>Preço unitário</h4>
         </div>
         <div className='btn-romove'>
 

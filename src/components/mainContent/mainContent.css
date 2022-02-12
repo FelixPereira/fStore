@@ -1,8 +1,9 @@
 .maincontent {
-  background-color: var(--dark-bg); 
   padding: 30px;
   width: 100%;
   height: 100%;
+  position: absolute;
+  right: 0;
 }
 
 @media screen and (min-width: 900px) {
