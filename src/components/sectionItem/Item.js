@@ -19,7 +19,7 @@ const Item = ({item, addItemToCart, addToWishList}) => {
       <div className='product-info-container'>
         <div className='product-info'>
           <h3 className='product-name'>{name}</h3>
-          <span className='product-price'>{price}</span>
+          <span className='product-price'>{price} Kz</span>
         </div>
         <div className='cartToCart-btn'>
           <CustomButton productBtn onClick={() => addItemToCart(item)}>Adicionar ao carrinho</CustomButton>
