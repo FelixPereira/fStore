@@ -1,7 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { selectCartItems, selectTotal } from '../../redux/cart/cartSelectors';
+import { 
+  selectCartItems, 
+  selectTotal, 
+  selectPriceTotal } from '../../redux/cart/cartSelectors';
 import { 
   addItemToCart, 
   deleteItemFromCart,
@@ -14,7 +17,8 @@ const CartPage = ({
   addItemToCart, 
   deleteItemFromCart,
   decreaseItemQuantity,
-  total
+  total,
+  priceTotal
   }) => {
     console.log(total)
   return(
@@ -29,6 +33,9 @@ const CartPage = ({
         <div className='productPrice'>
           <h4>Preço unitário</h4>
         </div>
+        <div className='productPrice'>
+          <h4>Preço total</h4>
+        </div>
         <div className='btn-romove'>
 
         </div>
@@ -36,7 +43,7 @@ const CartPage = ({
       <div className='checkout-body'>
         {
           cartItems.map(cartItem => {
-            const {name, price, productImage, quantity} = cartItem;
+            const {name, price, price2, productImage, quantity} = cartItem;
             return (
               <div key={cartItem.id} className='carti'>
                 <div className='producti'>
@@ -60,6 +67,10 @@ const CartPage = ({
                   <span>{price}</span>
                 </div>
 
+                <div className='productPrice'>
+                  <span>{price2}</span>
+                </div>
+
                 <div className='btn-romove'>
                 <span 
                   className='checkout-icon'
@@ -79,7 +90,8 @@ const CartPage = ({
 
 const mapStateToProps = createStructuredSelector({
   cartItems: selectCartItems,
-  total: selectTotal
+  total: selectTotal,
+  priceTotal: selectPriceTotal
 });
 
 const mapDispatchToProps = dispatch => ({

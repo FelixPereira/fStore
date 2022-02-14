@@ -1,6 +1,8 @@
 import React from 'react';
 
 import SectionItems from '../sectionItems/SectionItems';
+
+import './sectionPreview.css';
 import PRODUCTS from '../../teste';
 
 

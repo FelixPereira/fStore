@@ -13,9 +13,7 @@ import './mainContent.css';
 const Section = ({displaySidebar, toggleSidebar}) => {
   return(
     <main className='maincontent'>
-      { displaySidebar 
-        ? <Backdrop onClick={toggleSidebar} />
-        : ''}
+      { displaySidebar && <Backdrop onClick={toggleSidebar} /> }
       <Header />
       <Outlet />
     </main>
