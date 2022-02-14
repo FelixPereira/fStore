@@ -1,37 +1,47 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { ReactComponent as CartAdd } from '../../assets/cart-add.svg';
-import { ReactComponent as Cross } from '../../assets/cross.svg';
+import { ReactComponent as AddToCartIcon } from '../../assets/cart-add.svg';
+import { ReactComponent as RemoveFromWishlistIcon } from '../../assets/cross.svg';
 import { addItemToCart } from '../../redux/cart/cartActions';
 import { deleteFromWishList } from '../../redux/wishList/wishListAction';
 
 import './wishList-Cart-item.css';
 
-const SmallItem = ({cartItem, item, addItemToCart, deleteFromWishList}) => {
-  const {name, productImage, itemQuantity, price} = item;
-  console.table(item)
+const SmallItem = ({
+  cartItem, 
+  item, 
+  addItemToCart, 
+  deleteFromWishList
+  }) => {
+  const {name, price, quantity, productImage} = item;
   return(
-    <div className='wish'>
-      <div className='cartItem'>
+    <div className='item-container'>
+      <div className='item'>
         <div className='img-container'>
           <img src={productImage} alt={name} />
         </div>
-        <div className='itemI'>
-          <p className='itemName'>{name}</p>
-          <span className='itemPrice'>
-            { cartItem && `${itemQuantity} x ` } 
+        <div className='item-info'>
+          <p className='item-name'>{name}</p>
+          <span className='item-price'>
+            { cartItem && `${quantity} x ` } 
             {price}
           </span>
         </div>
       </div>
-      <div className='wishlist-icons'>
-        <div className='icon-container' onClick={() => addItemToCart(item)}>
-          <CartAdd className='icon'/>
+      { cartItem || 
+        <div className='wishlist-icons'>
+          <div 
+            className='icon-container' 
+            onClick={() => addItemToCart(item)}>
+              <AddToCartIcon className='icon'/>
+          </div>
+          <div 
+            className='icon-container' 
+            onClick={() => deleteFromWishList(item)}>
+              <RemoveFromWishlistIcon className='icon' />
+          </div>
         </div>
-        <div className='icon-container' onClick={() => deleteFromWishList(item)}>
-          <Cross className='icon' />
-        </div>
-      </div>
+      }
     </div>
   )
 }

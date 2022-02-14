@@ -1,10 +1,11 @@
-.wish {
+.item-container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
   margin-right: 10px;
   overflow: hidden;
 }
+
 
 .wishlist-icons {
   display: flex;
@@ -14,7 +15,7 @@
     transform: translateX(200px);
 }
 
-.wish:hover .wishlist-icons {
+.item-container:hover .wishlist-icons {
   transform: translateY(0);
 }
 
@@ -24,7 +25,7 @@
   padding: 2px;
 }
 
-.cartItem {
+.item {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -41,20 +42,20 @@
   border-radius: 100%;
 }
 
-.itemInfo {
+.item-info {
   width: 70%;
   display: flex;
   flex-direction: column;
 }
 
-.itemName {
+.item-name {
   font-size: 15px;
   margin-bottom: 5px;
   font-weight: bold;
   color: #fff;
 }
 
-.itemPrice {
+.item-price {
   font-size: 14px;
   color: #b7a3da;
 }

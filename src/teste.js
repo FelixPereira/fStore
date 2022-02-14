@@ -49,7 +49,7 @@ const PRODUCTS = [
   },
   {
     categoryId: 1,
-    categoryName: "Homen",
+    categoryName: "Homens",
     categoryUrl: "loja/homen",
     items: [
       {
@@ -125,7 +125,7 @@ const PRODUCTS = [
 
   {
     categoryId: 2,
-    categoryName: "Mulher",
+    categoryName: "Mulheres",
     categoryUrl: "loja/mulher",
     items: [
       {

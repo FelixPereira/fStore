@@ -23,8 +23,8 @@ const CartDropdown = ({cartItems, toggleDropdown}) => {
         cartItems.length 
         ? <div className='cartItems-container'>
             {
-              cartItems.map(({name, price, quantity, productImage}, id) => (
-              <SmallItem cartItem key={id} itemName={name} itemPrice={price} itemQuantity={quantity} itemImg={productImage} />
+              cartItems.map(cartItem => (
+                <SmallItem cartItem key={cartItem.id} item={cartItem} />
               ))
             }
           </div>

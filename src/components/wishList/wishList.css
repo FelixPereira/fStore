@@ -2,7 +2,7 @@
   height: 40%;
 }
 
-.wishListItems {
+.wishListItems-container {
   overflow-y: scroll;
   height: 100%;
 }
@@ -13,15 +13,15 @@
   font-size: 18px;
 }
 
-.wishListItems::-webkit-scrollbar {
+.wishListItems-container::-webkit-scrollbar {
   width: 12px;  /* width of the entire scrollbar */
 }
 
-.wishListItems::-webkit-scrollbar-track {
+.wishListItems-container::-webkit-scrollbar-track {
   background: #fff;  /* color of the tracking area */
 }
 
-.wishListItems::-webkit-scrollbar-thumb {
+.wishListItems-container::-webkit-scrollbar-thumb {
   background-color: var(--main-color);    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 3px solid #fff;  /* creates padding around scroll thumb */

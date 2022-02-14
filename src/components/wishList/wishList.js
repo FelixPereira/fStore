@@ -9,7 +9,7 @@ const WishList = ({wishListItems}) => {
   return(
     <div className='wishList'>
       <h2 className='wishList-title'>Lista de desejos</h2>
-      <div className='wishListItems'>
+      <div className='wishListItems-container'>
         {
           wishListItems
           .filter((wishListItem, idx) => idx < 10)
