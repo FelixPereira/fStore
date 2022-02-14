@@ -13,8 +13,8 @@ const WishList = ({wishListItems}) => {
         {
           wishListItems
           .filter((wishListItem, idx) => idx < 10)
-          .map(({name, id, price, productImage}) => (
-            <SmallItem key={id} itemName={name} itemPrice={price} itemImg={productImage}/>
+          .map(wishListItem => (
+            <SmallItem key={wishListItem.id} item={wishListItem}/>
           ))
         }
       </div>

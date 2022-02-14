@@ -4,6 +4,10 @@ export const addToWishList = (wishListItems, itemToAdd) => {
   if(existingItem) {
     return wishListItems;
   } else {
-    return [...wishListItems, itemToAdd]
+    return [...wishListItems, itemToAdd];
   }
-}
+};
+
+export const romoveFromWishList = (wishListItems, itemToRemove) => {
+  return wishListItems.filter(wishListItem => wishListItem.id !== itemToRemove.id)
+};

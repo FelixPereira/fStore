@@ -1,12 +1,38 @@
+.wish {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.wishlist-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+    transform: translateX(200px);
+}
+
+.wish:hover .wishlist-icons {
+  transform: translateY(0);
+}
+
+.wishlist-icons .icon-container {
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+}
+
 .cartItem {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .img-container {
   width: 30%;
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 .img-container img {
