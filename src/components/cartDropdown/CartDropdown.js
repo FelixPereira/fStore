@@ -4,13 +4,19 @@ import { createStructuredSelector } from 'reselect';
 import { useNavigate } from 'react-router-dom';
 
 import { selectCartItems } from '../../redux/cart/cartSelectors';
+import { toggleDropdown } from '../../redux/cart/cartActions';
 
 import './cartDropdown.css';
 import SmallItem from '../wishList-cart-item/wishList-Cart-item';
 import CustomButton from '../customButton/CustomButton';
 
-const CartDropdown = ({cartItems}) => {
+const CartDropdown = ({cartItems, toggleDropdown}) => {
   const navigate = useNavigate();
+  const checkoutAndToggleDropdown = () => {
+    navigate('/cartpage');
+    toggleDropdown();
+    
+  }
   return(
     <div className='cartDropdown'>
       {
@@ -24,13 +30,17 @@ const CartDropdown = ({cartItems}) => {
           </div>
         : <span className='empty-message'>O carrinho está vazio</span>
       } 
-      <CustomButton onClick={() => navigate('/cartpage')} productBtn >Checkout</CustomButton>
+      <CustomButton onClick={ checkoutAndToggleDropdown } productBtn >Checkout</CustomButton>
     </div>
   )
 }
 
 const mapStateToProps = createStructuredSelector({
-  cartItems: selectCartItems
+  cartItems: selectCartItems,
 });
 
-export default connect(mapStateToProps)(CartDropdown);
+const mapDispatchToProps = dispatch => ({
+  toggleDropdown: () => dispatch(toggleDropdown())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CartDropdown);
