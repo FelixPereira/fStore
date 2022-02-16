@@ -1,13 +1,16 @@
 import React from 'react';
 
 import SectionItems from '../sectionItems/SectionItems';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectShopProducts } from '../../redux/shop/shopSelector';
 
 import './sectionPreview.css';
 import PRODUCTS from '../../teste';
 
 
-const SectionPreview = ({displaySidebar, toggleSidebar}) => {
-  const products = PRODUCTS;
+const SectionPreview = ({displaySidebar, toggleSidebar, products}) => {
+  //const products = PRODUCTS;
   
   return(
     <div className='collections-preview'>
@@ -22,5 +25,7 @@ const SectionPreview = ({displaySidebar, toggleSidebar}) => {
   )
 };
 
-
-export default SectionPreview;
+const mapStateToProps = createStructuredSelector({
+  products: selectShopProducts
+});
+export default connect(mapStateToProps)(SectionPreview);
