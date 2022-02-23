@@ -1,12 +1,10 @@
 import React from 'react';
 
-import SectionItems from '../sectionItems/SectionItems';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectShopProducts } from '../../redux/shop/shopSelector';
 
-import './sectionPreview.css';
-
+import SectionItems from '../sectionItems/SectionItems';
 
 const SectionPreview = ({products}) => {
   return(
@@ -15,7 +13,10 @@ const SectionPreview = ({products}) => {
         products
           .filter((product, idx) => idx < 3)
           .map(({categoryName, items}, id) => (
-            <SectionItems categoryName={categoryName} items={items} key={id}/>
+            <SectionItems 
+              categoryName={categoryName} 
+              items={items} 
+              key={id} />
         ))
       }
     </div>
