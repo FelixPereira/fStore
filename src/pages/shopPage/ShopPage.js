@@ -5,9 +5,8 @@ import { selectShopProducts } from '../../redux/shop/shopSelector';
 import SectionItems from '../../components/sectionItems/SectionItems';
 
 const ShopPage = ({products}) => {
-
   return(
-    products.map(({categoryName, items, id}) => (
+    products.map(({categoryName, items}, id) => (
       <SectionItems  categoryName={categoryName} items={items} key={id}  />
     ))
   )

@@ -12,6 +12,7 @@ const SectionItems = ({categoryName, items}) => {
       <div className='teste'>
         <h2 
           className='category-name'
+          style={{cursor: 'pointer'}}
           onClick={() => navigate(`${categoryName.toLowerCase()}`)}
         > {categoryName} </h2>
       </div>

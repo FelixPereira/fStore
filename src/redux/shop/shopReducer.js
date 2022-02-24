@@ -1,4 +1,4 @@
-import PRODUCTS from '../../teste';
+import PRODUCTS from './teste';
 
 const INITIAL_STATE = {
   shopProducts: PRODUCTS
