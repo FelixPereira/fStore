@@ -1,12 +1,25 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectSectionProducts } from '../../redux/shop/shopSelector';
 
-const SectionOverview = () => {
-  const params = useParams();
-  console.log(params)
+
+const SectionOverview = ({sectionProducts}, props) => {
+  console.log(props)
+
   return(
-    <div>Olá mundo</div>
+   /* sectionProducts.map(product => (
+      <div>{product.categoryName}</div>
+      )) */
+      <div>ola</div>
   )
 };
 
-export default SectionOverview;
+/*
+const mapStateToProps = (state) => ({
+  sectionProducts: selectSectionProducts(params.categoryUrl)(state)
+});
+*/
+
+export default connect()(SectionOverview);

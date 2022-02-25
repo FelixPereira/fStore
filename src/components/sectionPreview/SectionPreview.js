@@ -11,7 +11,7 @@ const SectionPreview = ({products}) => {
     <div className='collections-preview'>
       {
         products
-          .filter((product, idx) => idx < 3)
+          .slice(0, 3)
           .map(({categoryName, items}, id) => (
             <SectionItems 
               categoryName={categoryName} 
