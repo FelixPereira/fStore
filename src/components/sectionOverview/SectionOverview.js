@@ -5,14 +5,17 @@ import { createStructuredSelector } from 'reselect';
 import { selectSectionProducts } from '../../redux/shop/shopSelector';
 
 
-const SectionOverview = ({sectionProducts}, props) => {
-  console.log(props)
+const SectionOverview = (props) => {
+  const { categoryUrl } = useParams();
+  const {params} = props;
+  params.categoryUrl = categoryUrl;
+  console.log(params)
 
   return(
    /* sectionProducts.map(product => (
       <div>{product.categoryName}</div>
       )) */
-      <div>ola</div>
+      <div>{params.categoryUrl}</div>
   )
 };
 
