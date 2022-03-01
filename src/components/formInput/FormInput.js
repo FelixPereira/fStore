@@ -1,13 +1,16 @@
 import React from 'react';
 import './formInput.css';
 
-const FormInput = ({type, label}) => {
+const FormInput = ({type, label, name}) => {
   return(
     <div className='form-field'>
-      <label className='field-label'>{label}</label>
+      <label 
+        id={name} 
+        className='field-label'>{label}</label>
       <input 
-      type={type}
-      className='form-input' />
+        type={type}
+        name={name}
+        className='form-input' />
     </div>
   )
 };

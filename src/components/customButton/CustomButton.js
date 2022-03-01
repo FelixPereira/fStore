@@ -4,7 +4,8 @@ import './customButton.css';
 
 const CustomButton = ({children, productBtn, ...otherProps}) => {
   return(
-    <button className={`customButton ${productBtn ? 'productBtn' : '' }`} {...otherProps}>{children}</button>
+    <button 
+      className={`customButton ${productBtn ? 'productBtn' : '' }`} {...otherProps}>{children}</button>
   )
 }
 

@@ -7,12 +7,12 @@ const LoginSigninPage = () => {
   return(
     <div className='login-signin'>
       <div className='login'>
-        <div className='login-signin--header'>Iniciar sessão</div>
+        <h3 className='login-signin--header'>Iniciar sessão</h3>
         <div className='login-signin--body'>
           <form>
             <div className='form-input-grup'>
-              <FormInput label='Email' type='email'/>
-              <FormInput label='Senha' type='password'/>
+              <FormInput name='email' label='Email' type='email'/>
+              <FormInput name='password' label='Senha' type='password'/>
             </div>
             <div className='form-buttons'>
               <CustomButton> Login </CustomButton>
@@ -22,19 +22,18 @@ const LoginSigninPage = () => {
         </div>
       </div>
       <div className='signup'>
-        <div className='login-signin--header'>Criar uma conta</div>
+        <h3 className='login-signin--header'>Criar uma conta</h3>
         <div className='login-signin--body'>
           <form>
-              <div className='form-input-grup'>
-                <FormInput label='Email' type='email'/>
-                <FormInput label='Senha' type='password'/>
-                <FormInput label='Confirmar a senha' type='password'/>
-              </div>
-              <div className='form-buttons'>
-                <CustomButton> Login </CustomButton>
-                <CustomButton> Login </CustomButton>
-              </div>
-            </form>
+            <div className='form-input-grup'>
+              <FormInput name='email' label='Email' type='email'/>
+              <FormInput name='password' label='Senha' type='password'/>
+              <FormInput name='confirmPassword' label='Confirmar a senha' type='password'/>
+            </div>
+            <div className='form-buttons'>
+              <CustomButton> Criar conta </CustomButton>
+            </div>
+          </form>
         </div>
       </div>
     </div>

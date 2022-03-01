@@ -1,24 +1,26 @@
 .customButton {
   background-color: var(--main-color);
   font-family: 'Dosis', sans-serif;
-  color: var(--main-color);
+  color: #fff;
   font-size: 0.9375rem;
   font-weight: bold;
   border-radius: 0.3125rem;
-  padding: 0.3125rem 0.9375rem;
+  padding: 10px 0.9375rem;
   border: none;
   cursor: pointer;
   transition: .5s;
+  margin-right: 10px;
 }
 
 .productBtn {
   background-color: #ffffff;
   color: var(--main-color);
+  margin-right: 0;
   width: 100%;
-
+  padding: 0.3125rem 0.9375rem;
 }
 
-.productBtn:hover {
+.customButton:hover {
   transform: translateY(3px);
   transition: .3s;
 }
