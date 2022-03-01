@@ -9,6 +9,7 @@ import CartPage from './pages/cartPage/cartPage';
 import HomePage from './pages/homePage/HomePage';
 import ShopPage from './pages/shopPage/ShopPage';
 import ShopItems from './components/shopItems/shopItems';
+import LoginSigninPage from './pages/login-signin/login-signin-page';
 
 import './App.css';
 
@@ -27,7 +28,7 @@ function App() {
             <Route path=':categoryUrl' element={ <SectionOverview name='felix' params={params} /> } />
           </Route>
           <Route path='contacto' element={ <CartPage /> } />
-          <Route path='signin' element={ <CartPage /> } />
+          <Route path='login' element={ <LoginSigninPage /> } />
         </Route>
       </Route>
     </Routes>

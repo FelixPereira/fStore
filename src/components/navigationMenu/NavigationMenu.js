@@ -48,6 +48,13 @@ const NavigatioMenu = () => {
               <span>06</span>Contacto
             </NavLink>
           </li>
+          <li>
+            <NavLink to='/login' className='naviLink' style={
+              ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
+            }>
+              <span>07</span>Login
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </div>
