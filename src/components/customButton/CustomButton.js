@@ -2,10 +2,12 @@ import React from 'react';
 
 import './customButton.css';
 
-const CustomButton = ({children, productBtn, ...otherProps}) => {
+const CustomButton = ({children, productBtn, withGoogle,  ...otherProps}) => {
   return(
     <button 
-      className={`customButton ${productBtn ? 'productBtn' : '' }`} {...otherProps}>{children}</button>
+      className={`customButton 
+        ${productBtn ? 'productBtn' : '' }`} 
+        {...otherProps}>{children}</button>
   )
 }
 

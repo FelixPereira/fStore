@@ -9,7 +9,7 @@
   border: none;
   cursor: pointer;
   transition: .5s;
-  margin-right: 10px;
+  margin: 0 0.625rem 0.625rem 0;
 }
 
 .productBtn {
@@ -18,9 +18,10 @@
   margin-right: 0;
   width: 100%;
   padding: 0.3125rem 0.9375rem;
+  margin-bottom: 0;
 }
 
 .customButton:hover {
-  transform: translateY(3px);
+  transform: translateY(0.1875rem);
   transition: .3s;
 }

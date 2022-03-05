@@ -6,16 +6,13 @@ import { selectSectionProducts } from '../../redux/shop/shopSelector';
 
 
 const SectionOverview = (props) => {
-  const { categoryUrl } = useParams();
-  const {params} = props;
-  params.categoryUrl = categoryUrl;
-  console.log(params)
+  console.log(props.match)
 
   return(
    /* sectionProducts.map(product => (
       <div>{product.categoryName}</div>
       )) */
-      <div>{params.categoryUrl}</div>
+      <div>''</div>
   )
 };
 

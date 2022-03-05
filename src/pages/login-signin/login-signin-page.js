@@ -7,7 +7,10 @@ const LoginSigninPage = () => {
   return(
     <div className='login-signin'>
       <div className='login'>
-        <h3 className='login-signin--header'>Iniciar sessão</h3>
+        <div className='login-signin--header'>
+          <h3>Já tenho uma conta</h3>
+          <span>Inicie sessão com o seu email e senha</span>
+        </div>
         <div className='login-signin--body'>
           <form>
             <div className='form-input-grup'>
@@ -22,7 +25,10 @@ const LoginSigninPage = () => {
         </div>
       </div>
       <div className='signup'>
-        <h3 className='login-signin--header'>Criar uma conta</h3>
+        <div className='login-signin--header'>
+          <h3>Ainda não tenho uma conta</h3>
+          <span>Crie uma conta</span>
+        </div>
         <div className='login-signin--body'>
           <form>
             <div className='form-input-grup'>

@@ -27,7 +27,6 @@ function App() {
             <Route path='' element={ <ShopItems /> } />
             <Route path=':categoryUrl' element={ <SectionOverview name='felix' params={params} /> } />
           </Route>
-          <Route path='contacto' element={ <CartPage /> } />
           <Route path='login' element={ <LoginSigninPage /> } />
         </Route>
       </Route>
