@@ -1,26 +1,41 @@
-.maincontent {
+.content-area {
 
   width: 100%;
-  padding: 30px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   
   position: absolute;
   right: 0;
 }
 
+.main-content {
+  padding: 30px;
+}
+
+.rodape {
+  background-color: #fff;
+  text-align: center;
+  color: var(--main-color);
+  padding: 10px 30px;
+  margin-top: 3rem
+}
+
 @media screen and (min-width: 900px) {
-  .maincontent {
+  .content-area {
     width: 75%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .maincontent {
+  .content-area {
     width: 80%;
   }
 }
 
 @media screen and (min-width: 1250px) {
-  .maincontent {
+  .content-area {
     width: 85%;
   }
 }

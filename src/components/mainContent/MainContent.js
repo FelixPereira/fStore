@@ -12,11 +12,20 @@ import './mainContent.css';
 
 const Section = ({displaySidebar, toggleSidebar}) => {
   return(
-    <main className='maincontent'>
-      { displaySidebar && <Backdrop onClick={toggleSidebar} /> }
-      <Header />
-      <Outlet />
-    </main>
+    <div  className='content-area'>
+      <div className='main-content'>
+        { displaySidebar && <Backdrop onClick={toggleSidebar} /> }
+
+        <Header />
+        <main>
+          <Outlet />
+        </main>
+      </div>
+      <footer className='rodape'>
+        <strong>Made with LOVE by Félix Pereira</strong>
+      </footer>
+    </div>
+
   )
 };
 

@@ -31,7 +31,7 @@ const SmallItem = ({
       { cartItem || 
         <div className='wishlist-icons'>
           <div 
-            className='icon-container' 
+            className='icon-container addCart' 
             onClick={() => addItemToCart(item)}>
               <AddToCartIcon className='icon'/>
           </div>
