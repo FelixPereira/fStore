@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactComponent as HumburgerMenu } from '../../assets/humburger-menu.svg';
+import { ReactComponent as CloseMenu } from '../../assets/cross.svg';
 import { ReactComponent as AvatarIcon } from '../../assets/user.svg';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -21,6 +22,12 @@ const Header = ({display, toggleSidebar}) => {
       <div className='humburger-icon' onClick={toggleSidebar}>
         <div className='icon-container'>
           <HumburgerMenu className='icon' />
+        </div>
+      </div>
+
+      <div className='close-menu' onClick={toggleSidebar}>
+        <div className='icon-container'>
+          <CloseMenu className='icon' />
         </div>
       </div>
 
