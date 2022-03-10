@@ -6,12 +6,11 @@ import { createStructuredSelector } from 'reselect';
 import { selectShopProducts } from '../../redux/shop/shopSelector';
 
 import './sectionPreview.css';
-import PRODUCTS from '../../teste';
 
-
-const SectionPreview = ({displaySidebar, toggleSidebar, products}) => {
-  //const products = PRODUCTS;
-  
+const SectionPreview = ({
+  displaySidebar, 
+  toggleSidebar, 
+  products}) => {
   return(
     <div className='collections-preview'>
       {

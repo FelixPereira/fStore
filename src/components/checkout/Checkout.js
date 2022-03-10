@@ -20,7 +20,6 @@ const Checkout = ({
   total,
   priceTotal
   }) => {
-    console.log(total)
   return(
     <div className='checkout'>
       <div className='checkout-header'>

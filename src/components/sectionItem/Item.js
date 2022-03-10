@@ -4,13 +4,14 @@ import { ReactComponent as ViewProduct } from '../../assets/eye.svg';
 import { connect } from 'react-redux';
 import { addItemToCart } from '../../redux/cart/cartActions';
 import { addToWishList } from '../../redux/wishList/wishListAction';
+import CustomButton from '../customButton/CustomButton';
 
 import './item.css';
 
-import CustomButton from '../customButton/CustomButton';
-
-
-const Item = ({item, addItemToCart, addToWishList}) => {
+const Item = ({
+  item, 
+  addItemToCart, 
+  addToWishList}) => {
   const {name, price, productImage} = item;
   return(
     <div className='product-item'>
