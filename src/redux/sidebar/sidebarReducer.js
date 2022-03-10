@@ -1,14 +1,14 @@
 import { actionsType } from "./sidebarActionsType";
 
 const INITIAL_STATE = {
-  display: false
+  showSidebar: false,
 };
 
 const sidebarReducer = (state = INITIAL_STATE, action) => {
   switch(action.type) {
     case actionsType.TOGGLE_SIDE_BAR:
       return {
-        display: !state.display
+        showSidebar: !state.showSidebar,
       };
 
     default:

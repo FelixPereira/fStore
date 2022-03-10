@@ -15,7 +15,7 @@ import CartIcon from '../cart-icon/CartIcon';
 import CartDropdown from '../cartDropdown/CartDropdown';
 
 
-const Header = ({display, toggleSidebar}) => {
+const Header = ({showSidebar, toggleSidebar}) => {
   const navigate = useNavigate();
   return(
     <header className='header'>
@@ -25,7 +25,7 @@ const Header = ({display, toggleSidebar}) => {
         </div>
       </div>
 
-      <div className='close-menu' onClick={toggleSidebar}>
+      <div className={`${showSidebar  ? 'hide-sidebar' : 'hide-sidebar--visible'}`} onClick={toggleSidebar}>
         <div className='icon-container'>
           <CloseMenu className='icon' />
         </div>
@@ -41,7 +41,7 @@ const Header = ({display, toggleSidebar}) => {
           <AvatarIcon className='icon' />
         </div>
         {
-          display ? <CartDropdown /> : ''
+          showSidebar ? <CartDropdown /> : ''
         }
       </div>
     </header>
@@ -49,7 +49,7 @@ const Header = ({display, toggleSidebar}) => {
 }
 
 const mapStateToProps = createStructuredSelector({
-  display: selectDisplay
+  showSidebar: selectDisplay
 });
 
 const mapDispatchToProps = dispatch => ({

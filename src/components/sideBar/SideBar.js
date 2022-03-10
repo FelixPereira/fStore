@@ -9,9 +9,9 @@ import NavigationMenu from '../navigationMenu/NavigationMenu';
 import './sideBar.css';
 
 
-const SideBar = ({displaySidebar}) => {
+const SideBar = ({showSidebar}) => {
   return(
-    <aside className={`sideBar ${displaySidebar ? 'sidebar--visible' : ''}`}>
+    <aside className={`sideBar ${showSidebar && 'sidebar--visible'}`}>
       <NavigationMenu />
       <WishList />
     </aside>
@@ -19,7 +19,7 @@ const SideBar = ({displaySidebar}) => {
 }
 
 const mapStateToProps = createStructuredSelector({
-  displaySidebar: selectDisplay
+  showSidebar: selectDisplay
 });
 
 export default connect(mapStateToProps)(SideBar);

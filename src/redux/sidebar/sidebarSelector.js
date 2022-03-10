@@ -4,5 +4,5 @@ const selectSidebar = state => state.sidebar;
 
 export const selectDisplay = createSelector(
   [selectSidebar],
-  sidebar => sidebar.display
+  sidebar => sidebar.showSidebar
 );
