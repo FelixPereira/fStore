@@ -6,7 +6,7 @@ import { toggleSidebar } from '../../redux/sidebar/sidebarActions';
 import { Outlet } from 'react-router-dom';
 
 import Header from '../header/Header';
-import Backdrop from '../backdrop/backdrop';
+import Backdrop from '../backdrop/Backdrop';
 
 import './mainContent.css';
 
