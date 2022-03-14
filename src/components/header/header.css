@@ -19,8 +19,6 @@
   position: relative;
 }
 
-
-
 @media screen and (min-width: 900px) {
   .humburger-icon {
     display: none !important;
