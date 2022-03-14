@@ -25,12 +25,6 @@ const Header = ({showSidebar, toggleSidebar}) => {
         </div>
       </div>
 
-      <div className={`${showSidebar  ? 'hide-sidebar' : 'hide-sidebar--visible'}`} onClick={toggleSidebar}>
-        <div className='icon-container'>
-          <CloseMenu className='icon' />
-        </div>
-      </div>
-
       <SearchBar />
 
       <div className='rightside-icons'>
