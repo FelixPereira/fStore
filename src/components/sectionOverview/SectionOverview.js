@@ -6,20 +6,22 @@ import { selectSectionProducts } from '../../redux/shop/shopSelector';
 
 
 const SectionOverview = (props) => {
+  const params = useParams();
   console.log(props.match)
+  console.log(params)
 
   return(
    /* sectionProducts.map(product => (
       <div>{product.categoryName}</div>
       )) */
-      <div>''</div>
+      <div>Ola mundo</div>
   )
 };
 
-/*
-const mapStateToProps = (state) => ({
-  sectionProducts: selectSectionProducts(params.categoryUrl)(state)
-});
-*/
 
-export default connect()(SectionOverview);
+const mapStateToProps = (state, ownProps) => ({
+  sectionProducts: selectSectionProducts(ownProps)(state)
+});
+
+
+export default connect(mapStateToProps)(SectionOverview);
