@@ -9,6 +9,13 @@ export const selectShopProducts = createSelector(
 
 export const selectSectionProducts = sectionUrl => createSelector(
   [selectShop],
-  shop => shop.shopProducts[sectionUrl]
-  
-)
+
+  shop => {
+    const collectionUrl = sectionUrl.split('').map((letter, idx) => {
+      return idx === 0 ? letter.toUpperCase() : letter
+    }).join('');
+
+    return shop.shopProducts[collectionUrl];
+  }
+);
+
