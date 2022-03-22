@@ -1,17 +1,22 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { selectSectionProducts } from '../../redux/shop/shopSelector';
+import { selectShopProducts } from '../../redux/shop/shopSelector';
 
+import SectionPreview from '../sectionPreview/SectionPreview';
 
 const SectionOverview = () => {
-  const { categoryUrl } = useParams();
-  const sectionsP = useSelector(selectSectionProducts(categoryUrl));
-  console.log(sectionsP);
-  
+  const products = useSelector(selectShopProducts);
+  products.map(a => console.log(a))
+
   return(
-    <div>{sectionsP.categoryName}</div>
+    <div className='category-preview'>
+      {
+        products.map(({categoryName, categoryUrl, items, categoryId}) => (
+          <SectionPreview categoryName={categoryName} items={items} key={categoryId}/>
+        ))
+      }
+    </div>
   )
-};
+}
 
 export default SectionOverview;

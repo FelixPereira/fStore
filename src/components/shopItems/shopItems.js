@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectShopProducts } from '../../redux/shop/shopSelector';
 
-import SectionItems from '../sectionItems/SectionItems';
+import SectionItems from '../sectionOverview/SectionOverview';
 
 const ShopItems = ({products}) => {
   return(

@@ -7,11 +7,11 @@ export const selectShopProducts = createSelector(
   shop => Object.keys(shop.shopProducts).map(key => shop.shopProducts[key])
 );
 
-export const selectSectionProducts = sectionUrl => createSelector(
+export const selectSectionProducts = urlParam => createSelector(
   [selectShop],
 
   shop => {
-    const collectionUrl = sectionUrl.split('').map((letter, idx) => {
+    const collectionUrl = urlParam.split('').map((letter, idx) => {
       return idx === 0 ? letter.toUpperCase() : letter
     }).join('');
 

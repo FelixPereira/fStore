@@ -1,25 +1,29 @@
 import React from 'react';
 
-import { useSelector } from 'react-redux';
-import { selectShopProducts } from '../../redux/shop/shopSelector';
+import { useNavigate } from 'react-router-dom';
+import Item from '../sectionItem/Item';
 
-import SectionItems from '../sectionItems/SectionItems';
 
-const SectionPreview = () => {
-  const products = useSelector(selectShopProducts)
+const SectionPreview = ({categoryName, items}) => {
+  const navigate = useNavigate();
 
   return(
-    <div className='collections-preview'>
-      {
-        products
-          .slice(0, 3)
-          .map(({categoryName, items}, id) => (
-            <SectionItems 
-              categoryName={categoryName} 
-              items={items} 
-              key={id} />
-        ))
-      }
+    <div className='collection-preview'>
+      <h2 
+        className='category-name'
+        style={{cursor: 'pointer'}}
+        onClick={() => navigate(`${categoryName.toLowerCase()}`)}
+      > {categoryName} </h2>
+
+      <div className='products-list'>
+        {
+          items
+          .filter((items, idx) => idx < 5 )
+          .map(item => (
+            <Item item={item} key={item.id}/>
+          ))
+        }
+      </div>
     </div>
   )
 };
