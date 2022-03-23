@@ -2,20 +2,24 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectSectionProducts } from '../../redux/shop/shopSelector';
-import SectionItems from '../sectionOverview/SectionOverview';
+import Item from '../sectionItem/Item';
 
 
-const SectionOverview = () => {
+const CollectionPage = () => {
   const { categoryUrl } = useParams();
   const collectionproducts = useSelector(selectSectionProducts(categoryUrl));
   
+  console.log(collectionproducts)
   return(
     <div className='collection-overview'>
-      <SectionItems 
-        categoryName={collectionproducts.categoryName} 
-        items={collectionproducts.items} />
+      <h2>{collectionproducts.categoryName}</h2>
+      {
+        collectionproducts.items.map((item) => (
+          <Item item={item} />
+        ))
+      }
     </div>
   )
 };
 
-export default SectionOverview;
+export default CollectionPage;

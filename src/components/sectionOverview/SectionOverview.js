@@ -4,19 +4,21 @@ import { selectShopProducts } from '../../redux/shop/shopSelector';
 
 import SectionPreview from '../sectionPreview/SectionPreview';
 
-const SectionOverview = () => {
+const SectionOverview = ({home}) => {
   const products = useSelector(selectShopProducts);
-  products.map(a => console.log(a))
 
   return(
-    <div className='category-preview'>
+    <div className='collections-container'>
       {
-        products.map(({categoryName, categoryUrl, items, categoryId}) => (
-          <SectionPreview categoryName={categoryName} items={items} key={categoryId}/>
+        products.map(({categoryName, items, categoryId}) => (
+          <SectionPreview 
+            categoryName={categoryName} 
+            items={items} 
+            key={categoryId}/>
         ))
       }
     </div>
   )
-}
+};
 
 export default SectionOverview;

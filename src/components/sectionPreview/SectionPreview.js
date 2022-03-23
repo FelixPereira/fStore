@@ -1,19 +1,14 @@
 import React from 'react';
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import Item from '../sectionItem/Item';
+import './sectionPreview.css';
 
 
 const SectionPreview = ({categoryName, items}) => {
-  const navigate = useNavigate();
-
   return(
     <div className='collection-preview'>
-      <h2 
-        className='category-name'
-        style={{cursor: 'pointer'}}
-        onClick={() => navigate(`${categoryName.toLowerCase()}`)}
-      > {categoryName} </h2>
+      <h2 className='category-name' style={{cursor: 'pointer'}}> <Link to={`/loja/${categoryName.toLowerCase()}`}> {categoryName} </Link></h2>
 
       <div className='products-list'>
         {
