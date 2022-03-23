@@ -16,7 +16,7 @@ function App() {
     <Routes>
       <Route path='/' element={ <HomePage /> } >
         <Route path='' element={ <MainContent /> }>
-          <Route path='' element={ <SectionOverview /> } />
+          <Route path='' element={ <SectionOverview homePage /> } />
           <Route path='cartpage' element={ <CartPage /> } />
           <Route path='loja' element={ <ShopPage />} >
             <Route path='' element={ <SectionOverview /> } />

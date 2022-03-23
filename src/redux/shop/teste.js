@@ -2,7 +2,7 @@ const PRODUCTS = {
   'Em destaque': {
     categoryId: 0,
     categoryName: "Em destaque",
-    categoryUrl: "loja/destaque",
+    categoryUrl: "/loja/destaque",
     items: [
       {
         id: 33,
@@ -51,7 +51,7 @@ const PRODUCTS = {
   "Homens": {
     categoryId: 1,
     categoryName: "Homens",
-    categoryUrl: "loja/homen",
+    categoryUrl: "/loja/homens",
     items: [
       {
         id: 1,
@@ -128,7 +128,7 @@ const PRODUCTS = {
   "Mulheres": {
     categoryId: 2,
     categoryName: "Mulheres",
-    categoryUrl: "loja/mulher",
+    categoryUrl: "/loja/mulheres",
     items: [
       {
         id: 11,
@@ -205,7 +205,7 @@ const PRODUCTS = {
   "Meninos": {
     categoryId: 3,
     categoryName: "Meninos",
-    categoryUrl: "loja/menino",
+    categoryUrl: "/loja/meninos",
     items: [
       {
         id: 21,
@@ -254,7 +254,7 @@ const PRODUCTS = {
   "Meninas": {
     categoryId: 4,
     categoryName: "Meninas",
-    categoryUrl: "loja/menina",
+    categoryUrl: "/loja/meninas",
     items: [
       {
         id: 27,
