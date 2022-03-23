@@ -11,7 +11,7 @@ const SectionPreview = ({categoryName, items, collectionPage}) => {
   return(
     <div className='collection-preview'>
       <h2 className='category-name' > 
-        <Link to={`loja/${categoryName.toLowerCase()}`}> 
+        <Link to={`/loja/${categoryName.toLowerCase()}`}> 
           {categoryName} 
         </Link>
       </h2>

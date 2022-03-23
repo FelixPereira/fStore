@@ -28,14 +28,14 @@ const NavigatioMenu = () => {
           </NavLink>
           </li>
           <li>
-            <NavLink to='/masculino' className='naviLink' style={
+            <NavLink to='/loja/homens' className='naviLink' style={
               ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
               <span>03</span>Masculino 
             </NavLink>
           </li>
           <li>
-            <NavLink to='/feminino' className='naviLink' style={
+            <NavLink to='/loja/mulheres' className='naviLink' style={
               ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
               <span>04</span>Feminino
