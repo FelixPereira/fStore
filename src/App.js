@@ -20,7 +20,9 @@ function App() {
           <Route path='cartpage' element={ <CartPage /> } />
           <Route path='loja' element={ <ShopPage />} >
             <Route path='' element={ <SectionOverview /> } />
-            <Route path=':categoryUrl' element={ <CollectionPage /> } />
+            <Route path=':categoryUrl' element={ <CollectionPage /> } >
+              <Route path=':productId' element={ <CollectionPage /> } />
+            </Route>
           </Route>
           <Route path='login' element={ <LoginSigninPage /> } />
         </Route>

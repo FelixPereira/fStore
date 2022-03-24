@@ -12,19 +12,12 @@ const CollectionPage = () => {
 
   return(
     <div className='collection-overview'>
-      <SectionPreview categoryName={categoryName} items={items} collectionPage />
+      <SectionPreview 
+        categoryName={categoryName} 
+        items={items} 
+        collectionPage />
     </div>
   )
 };
 
 export default CollectionPage;
-
-/*
-
-<h2>{collectionproducts.categoryName}</h2>
-      {
-        collectionproducts.items.map((item) => (
-          <Item item={item} />
-        ))
-      }
-*/
