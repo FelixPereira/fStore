@@ -10,7 +10,7 @@ import {
   deleteItemFromCart,
   decreaseItemQuantity } from '../../redux/cart/cartActions';
 
-import StipeCheckoutButton from '../stripe/StripeButton';
+import StripeCheckoutButton from '../stripe/StripeButton';
 import './checkout.css';
 
 const Checkout = ({
@@ -82,7 +82,7 @@ const Checkout = ({
           {
             total > 0 ?
               <>
-                <StipeCheckoutButton price={total} />
+                <StripeCheckoutButton price={total} />
 
                 <div className='payment-info'>
                   <h2>Dados do cartão de crádito para testar o pagamento</h2>
