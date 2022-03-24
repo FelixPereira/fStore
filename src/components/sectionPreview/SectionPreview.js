@@ -6,12 +6,16 @@ import Item from '../sectionItem/Item';
 import './sectionPreview.css';
 
 
-const SectionPreview = ({categoryName, items, collectionPage}) => {
+const SectionPreview = ({
+  categoryName, 
+  items, 
+  collectionPage, 
+  categoryUrl}) => {
 
   return(
     <div className='collection-preview'>
       <h2 className='category-name' > 
-        <Link to={`/loja/${categoryName.toLowerCase()}`}> 
+        <Link to={`${collectionPage ? '' : categoryUrl}`}> 
           {categoryName} 
         </Link>
       </h2>
