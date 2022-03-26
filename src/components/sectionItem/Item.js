@@ -11,9 +11,10 @@ import './item.css';
 import CustomButton from '../customButton/CustomButton';
 
 
-const Item = ({item, categoryUrl, addItemToCart, addToWishList}) => {
+const Item = ({item, categoryUrl, addItemToCart, addToWishList, productPath}) => {
   const {name, price, productImage} = item;
   const productUrl = name.split(' ').join('-').toLowerCase();
+
 
   return(
     <div className='product-item'>

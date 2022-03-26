@@ -6,7 +6,7 @@ import { selectShopProduct } from '../../redux/shop/shopSelector';
 const SingleProductPage = () => {
   const { categoryUrl, productUrl } = useParams();
   const shopProduct = useSelector(selectShopProduct(categoryUrl, productUrl));
-
+ 
   console.log(shopProduct);
 
   return(

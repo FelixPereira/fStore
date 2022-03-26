@@ -9,7 +9,8 @@ import './sectionPreview.css';
 const SectionPreview = ({
   categoryName, 
   items, 
-  collectionPage, 
+  collectionPage,
+  productPath, 
   categoryUrl}) => {
 
   return(
@@ -25,7 +26,7 @@ const SectionPreview = ({
           items
           .slice(...(collectionPage ? [0] : [0, 5]))
           .map(item => (
-            <Item item={item} key={item.id} categoryUrl={categoryUrl} />
+            <Item item={item} key={item.id} categoryUrl={categoryUrl} productPath={productPath} />
           ))
         }
       </div>
