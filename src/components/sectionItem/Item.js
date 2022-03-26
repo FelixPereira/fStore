@@ -11,8 +11,10 @@ import './item.css';
 import CustomButton from '../customButton/CustomButton';
 
 
-const Item = ({item, addItemToCart, addToWishList}) => {
+const Item = ({item, categoryUrl, addItemToCart, addToWishList}) => {
   const {name, price, productImage} = item;
+  const productUrl = name.split(' ').join('-').toLowerCase();
+
   return(
     <div className='product-item'>
       <div style={{backgroundImage: `url(${productImage})`}}
@@ -34,7 +36,7 @@ const Item = ({item, addItemToCart, addToWishList}) => {
           title='Adicionar à lista de desejos'
           onClick={() => addToWishList(item)} />
           <span className='tooltip tooltip-wishlist'>Adicionar aos favoritos</span>
-        <Link to='felix'>
+        <Link to={`${categoryUrl}/${productUrl}`}>
           <ViewProduct 
             className='icon view-product' 
             title='Ver os detalhes'/>

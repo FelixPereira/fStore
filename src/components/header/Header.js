@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactComponent as HumburgerMenu } from '../../assets/humburger-menu.svg';
-import { ReactComponent as CloseMenu } from '../../assets/cross.svg';
+// import { ReactComponent as CloseMenu } from '../../assets/cross.svg';
 import { ReactComponent as AvatarIcon } from '../../assets/user.svg';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';

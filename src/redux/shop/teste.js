@@ -260,7 +260,8 @@ const PRODUCTS = {
         id: 27,
         name: "Chapéu 1",
         price: 418000,
-        productImage: "/images/shop-img/mens/polka-dot-shirt.png"
+        productImage: "/images/shop-img/mens/polka-dot-shirt.png",
+        description: "This is the long description of this product"
       },
 
       {
