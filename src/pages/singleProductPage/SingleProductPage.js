@@ -12,7 +12,9 @@ import {
   ProductPrice,
   QuantityContainer,
   IconContainer,
-  ButtomContainer } from './singleProductPageStyle';
+  ButtomContainer,
+
+  RightContainer} from './singleProductPageStyle';
 
 const SingleProductPage = () => {
   const { categoryUrl, productUrl } = useParams();
@@ -26,26 +28,30 @@ const SingleProductPage = () => {
         <img className='product-image' src={`${shopProduct.productImage}`} alt={`${shopProduct.name}`} />
       </ProductImageContainer>
       
-      <ProductInfoContainer>
-        <ProductName>{shopProduct.name}</ProductName>
-        <ProductPrice>{shopProduct.price}</ProductPrice>
-          <QuantityContainer>
-            <IconContainer>
-              <span>&#10094;</span>
-            </IconContainer>
-            <IconContainer>5</IconContainer>
-            <IconContainer>
-              <span>&#10095;</span>
-            </IconContainer>
-          </QuantityContainer>
+      <RightContainer>
+        <ProductInfoContainer>
+          <ProductName>{shopProduct.name}</ProductName>
+          <ProductPrice>{shopProduct.price}</ProductPrice>
         </ProductInfoContainer>
+
         <ButtomContainer>
+          <QuantityContainer>
+              <IconContainer>
+                <span>&#10094;</span>
+              </IconContainer>
+                <IconContainer>5</IconContainer>
+              <IconContainer>
+                <span>&#10095;</span>
+              </IconContainer>
+            </QuantityContainer>
           <CustomButton productBtn>Adicionar ao carrinho</CustomButton>
+          <div className='icon-container'>
           <HeartIcon 
             className='icon' 
             title='Adicionar à lista de desejos' />
+          </div>
         </ButtomContainer>
-        
+      </RightContainer>
     </ProductPageContainer>
   )
 };
