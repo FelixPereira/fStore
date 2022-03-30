@@ -26,7 +26,8 @@ export const ProductImageContainer = styled.div`
 `;
 
 export const RightContainer = styled.div`
-
+  display: flex;
+  flex-direction: column;
 `;
 
 export const ProductInfoContainer = styled.div`
@@ -77,12 +78,15 @@ export const IconContainer = styled.div`
   }
 `;
 
-export const ButtomContainer = styled.div`
+export const ButtomsContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 
-  & ~ CustomButton {
-    margin-right: 50px !important;
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
   }
+`;
+
+export const BtnContainer = styled.div`
+  display: flex;
 `;

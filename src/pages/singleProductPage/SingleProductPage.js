@@ -12,8 +12,9 @@ import {
   ProductPrice,
   QuantityContainer,
   IconContainer,
-  ButtomContainer,
-
+  ButtomsContainer,
+  
+  BtnContainer,
   RightContainer} from './singleProductPageStyle';
 
 const SingleProductPage = () => {
@@ -34,23 +35,25 @@ const SingleProductPage = () => {
           <ProductPrice>{shopProduct.price}</ProductPrice>
         </ProductInfoContainer>
 
-        <ButtomContainer>
+        <ButtomsContainer>
           <QuantityContainer>
-              <IconContainer>
-                <span>&#10094;</span>
-              </IconContainer>
-                <IconContainer>5</IconContainer>
-              <IconContainer>
-                <span>&#10095;</span>
-              </IconContainer>
-            </QuantityContainer>
-          <CustomButton productBtn>Adicionar ao carrinho</CustomButton>
-          <div className='icon-container'>
-          <HeartIcon 
-            className='icon' 
-            title='Adicionar à lista de desejos' />
-          </div>
-        </ButtomContainer>
+            <IconContainer>
+              <span>&#10094;</span>
+            </IconContainer>
+              <IconContainer>5</IconContainer>
+            <IconContainer>
+              <span>&#10095;</span>
+            </IconContainer>
+          </QuantityContainer>
+          <BtnContainer>
+            <CustomButton productBtn>Adicionar ao carrinho</CustomButton>
+            <div className='icon-container'>
+              <HeartIcon 
+              className='icon' 
+              title='Adicionar à lista de desejos' />
+            </div>
+          </BtnContainer>
+        </ButtomsContainer>
       </RightContainer>
     </ProductPageContainer>
   )
