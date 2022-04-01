@@ -12,7 +12,6 @@ const SectionPreview = ({
   collectionPage,
   productPath, 
   categoryUrl}) => {
-
   return(
     <div className='collection-preview'>
       <h2 className='category-name' > 

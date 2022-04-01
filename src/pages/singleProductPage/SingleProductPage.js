@@ -5,55 +5,59 @@ import { selectShopProduct } from '../../redux/shop/shopSelector';
 import CustomButton from '../../components/customButton/CustomButton';
 import { ReactComponent as HeartIcon } from '../../assets/heart.svg';
 import { 
-  ProductName,
   ProductPageContainer,
   ProductImageContainer,
   ProductInfoContainer,
+  ProductName,
   ProductPrice,
   QuantityContainer,
-  IconContainer,
-  ButtomsContainer,
-  
+  Arrow,
+  ArrowContainer,
+  ButtonsContainer,
   BtnContainer,
   RightContainer} from './singleProductPageStyle';
 
 const SingleProductPage = () => {
   const { categoryUrl, productUrl } = useParams();
   const shopProduct = useSelector(selectShopProduct(categoryUrl, productUrl));
- 
+  const {name, productImage, price, quantity} = shopProduct;
+
   console.log(shopProduct);
 
   return(
     <ProductPageContainer>
       <ProductImageContainer>
-        <img className='product-image' src={`${shopProduct.productImage}`} alt={`${shopProduct.name}`} />
+        <img 
+          className='product-image' 
+          src={`${productImage}`} 
+          alt={`${name}`} />
       </ProductImageContainer>
       
       <RightContainer>
         <ProductInfoContainer>
-          <ProductName>{shopProduct.name}</ProductName>
-          <ProductPrice>{shopProduct.price}</ProductPrice>
+          <ProductName>{name}</ProductName>
+          <ProductPrice>{price}</ProductPrice>
         </ProductInfoContainer>
 
-        <ButtomsContainer>
+        <ButtonsContainer>
           <QuantityContainer>
-            <IconContainer>
-              <span>&#10094;</span>
-            </IconContainer>
-              <IconContainer>5</IconContainer>
-            <IconContainer>
-              <span>&#10095;</span>
-            </IconContainer>
+            <ArrowContainer>
+              <Arrow>&#10094;</Arrow>
+            </ArrowContainer>
+            <ArrowContainer>5</ArrowContainer>
+            <ArrowContainer>
+              <Arrow>&#10095;</Arrow>
+            </ArrowContainer>
           </QuantityContainer>
           <BtnContainer>
             <CustomButton productBtn>Adicionar ao carrinho</CustomButton>
             <div className='icon-container'>
               <HeartIcon 
-              className='icon' 
-              title='Adicionar à lista de desejos' />
+                className='icon' 
+                title='Adicionar à lista de desejos' />
             </div>
           </BtnContainer>
-        </ButtomsContainer>
+        </ButtonsContainer>
       </RightContainer>
     </ProductPageContainer>
   )

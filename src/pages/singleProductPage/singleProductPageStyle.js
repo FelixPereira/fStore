@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import CustomButton from '../../components/customButton/CustomButton';
 
 export const ProductPageContainer = styled.div`
   display: flex;
@@ -8,10 +7,18 @@ export const ProductPageContainer = styled.div`
   padding-top: 50px;
   margin: 0 auto;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 665px) {
     flex-direction: row;
     align-items: conter;
     justify-content: space-between;
+  }
+
+  @media screen and (min-width: 700px) {
+    width: 600px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    width: 700px;
   }
 `;
 
@@ -63,7 +70,7 @@ export const QuantityContainer = styled.div`
   }
 `;
 
-export const IconContainer = styled.div`
+export const ArrowContainer = styled.div`
   color: #fff;
   border: solid 1px #fff;
   width: 40px;
@@ -74,11 +81,16 @@ export const IconContainer = styled.div`
   cursor: pointer;
 
   :active {
-    transform: scale(1.1)
+    transform: scale(1.1);
+    transition: .2s;
   }
 `;
 
-export const ButtomsContainer = styled.div`
+export const Arrow = styled.span`
+  color: #fff;
+`;
+
+export const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
 

@@ -21,7 +21,7 @@
   margin-bottom: 0;
 }
 
-.customButton:hover {
+.customButton:active {
   transform: translateY(0.1875rem);
-  transition: .3s;
+  transition: .2s;
 }
