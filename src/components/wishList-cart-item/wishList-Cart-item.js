@@ -4,6 +4,7 @@ import { ReactComponent as AddToCartIcon } from '../../assets/cart-add.svg';
 import { ReactComponent as RemoveFromWishlistIcon } from '../../assets/cross.svg';
 import { addItemToCart } from '../../redux/cart/cartActions';
 import { deleteFromWishList } from '../../redux/wishList/wishListAction';
+import IconContainer from '../icon/Icon';
 
 import './wishList-Cart-item.css';
 
@@ -30,16 +31,16 @@ const SmallItem = ({
       </div>
       { cartItem || 
         <div className='wishlist-icons'>
-          <div 
-            className='icon-container addCart' 
+          <IconContainer 
+            wishlist
             onClick={() => addItemToCart(item)}>
               <AddToCartIcon className='icon'/>
-          </div>
-          <div 
-            className='icon-container' 
+          </IconContainer>
+          <IconContainer 
+            wishlist
             onClick={() => deleteFromWishList(item)}>
               <RemoveFromWishlistIcon className='icon' />
-          </div>
+          </IconContainer>
         </div>
       }
     </div>

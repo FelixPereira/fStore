@@ -11,8 +11,9 @@ import { useNavigate } from 'react-router-dom';
 import './header.css';
 
 import SearchBar from '../searchBar/SearchBar';
-import CartIcon from '../cart-icon/CartIcon';
+import CartIcon from '../cartIcon/CartIcon';
 import CartDropdown from '../cartDropdown/CartDropdown';
+import IconContainer from '../icon/Icon';
 
 
 const Header = ({showSidebar, toggleSidebar}) => {
@@ -20,20 +21,19 @@ const Header = ({showSidebar, toggleSidebar}) => {
   return(
     <header className='header'>
       <div className='humburger-icon' onClick={toggleSidebar}>
-        <div className='icon-container'>
+        <IconContainer>
           <HumburgerMenu className='icon' />
-        </div>
+        </IconContainer>
       </div>
 
       <SearchBar />
 
       <div className='rightside-icons'>
         <CartIcon />
-        <div 
-          className='icon-container' 
+        <IconContainer 
           onClick={() => navigate('login')}>
           <AvatarIcon className='icon' />
-        </div>
+        </IconContainer>
         {
           showSidebar ? <CartDropdown /> : ''
         }
