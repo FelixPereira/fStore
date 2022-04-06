@@ -11,7 +11,19 @@ import {
   decreaseItemQuantity } from '../../redux/cart/cartActions';
 
 import StripeCheckoutButton from '../stripe/StripeButton';
-import './checkout.css';
+import {
+  Container,
+  Wrapper,
+  Product,
+  ImageContainer,
+  Image,
+  InfoContainer,
+  ProductName,
+  ProductPrice,
+  QuantityContainer,
+  Arrow,
+  Quantity
+  } from './checkout-style.js';
 
 const Checkout = ({
   cartItems, 
@@ -22,61 +34,7 @@ const Checkout = ({
   priceTotal
   }) => {
   return(
-    <div className='checkout'>
-      <div className='checkout-header'>
-        <div className='producti'>
-          <h4>Produto</h4>
-        </div>
-        <div className='productQuantity'>
-          <h4>Quantidade</h4>
-        </div>
-        <div className='productPrice'>
-          <h4>Preço unitário</h4>
-        </div>
-        <div className='productPrice'>
-          <h4>Preço total</h4>
-        </div>
-      </div>
-      <div className='checkout-body'>
-        {
-          cartItems.map(cartItem => {
-            const {name, price, price2, productImage, quantity} = cartItem;
-            return (
-              <div key={cartItem.id} className='carti'>
-                <div className='producti'>
-                  <div>
-                    <img src={productImage} alt={name} />
-                  </div>
-                  <span>{name}</span>
-                </div>
-             
-                <div className='productQuantity'>
-                  <span 
-                    className='checkout-icon'
-                    onClick={() => decreaseItemQuantity(cartItem)}>&#10094;</span>
-                  <span>{quantity}</span>
-                  <span 
-                    className='checkout-icon'
-                    onClick={() => addItemToCart(cartItem)}>&#10095;</span>
-                </div>
-
-                <div className='productPrice'>
-                  <span>{price}</span>
-                </div>
-
-                <div className='productPrice'>
-                  <span>{price2}</span>
-                </div>
-
-                <div className='btn-romove'>
-                <span 
-                  className='checkout-icon'
-                  onClick={() => deleteItemFromCart(cartItem)}>&#10005;</span>
-                </div>
-            </div>
-            )
-          })
-        }
+  /*
         <div className='subtotal'>
           <h2>Total: {total} Kz</h2>
           {
@@ -96,6 +54,34 @@ const Checkout = ({
       </div>
       </div>
     </div>
+  */
+
+    <Container>
+      {
+        cartItems.map(cartItem => {
+          const {name, price, price2, productImage, quantity} = cartItem;
+          return (
+            <Wrapper>
+              <Product>
+                <ImageContainer>
+                  <Image src={productImage} />
+                </ImageContainer>
+                <InfoContainer>
+                  <ProductName>{name}</ProductName>
+                  <ProductPrice>{price}</ProductPrice>
+                </InfoContainer>
+                <QuantityContainer>
+                  <Arrow onClick={() => decreaseItemQuantity(cartItem)}>&#10094;</Arrow>
+                  <Quantity>{quantity}</Quantity>
+                  <Arrow onClick={() => addItemToCart(cartItem)}>&#10095;</Arrow>
+                </QuantityContainer>
+                <Arrow onClick={() => deleteItemFromCart(cartItem)}>&#10005;</Arrow>
+              </Product>
+            </Wrapper>
+            )
+          })
+      }
+    </Container>
   )
 };
 

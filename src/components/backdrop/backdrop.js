@@ -1,10 +1,10 @@
 import React from 'react';
+import { Container } from './backdrop-style';
 
-import './backdrop.css';
 
 const Backdrop = ({...props}) => {
   return (
-    <div {...props} className='backdrop' />
+    <Container {...props} className='backdrop' />
   )
 };
 

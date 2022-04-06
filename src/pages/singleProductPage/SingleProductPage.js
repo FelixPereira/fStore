@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { selectShopProduct } from '../../redux/shop/shopSelector';
 import CustomButton from '../../components/customButton/CustomButton';
 import { ReactComponent as HeartIcon } from '../../assets/heart.svg';
+import IconContainer from '../../components/icon/Icon';
 import { 
   ProductPageContainer,
   ProductImageContainer,
@@ -16,6 +17,7 @@ import {
   ButtonsContainer,
   BtnContainer,
   RightContainer} from './singleProductPageStyle';
+
 
 const SingleProductPage = () => {
   const { categoryUrl, productUrl } = useParams();
@@ -51,13 +53,14 @@ const SingleProductPage = () => {
           </QuantityContainer>
           <BtnContainer>
             <CustomButton productBtn>Adicionar ao carrinho</CustomButton>
-            <div className='icon-container'>
+            <IconContainer className='icon-container'>
               <HeartIcon 
                 className='icon' 
                 title='Adicionar à lista de desejos' />
-            </div>
+            </IconContainer>
           </BtnContainer>
         </ButtonsContainer>
+        
       </RightContainer>
     </ProductPageContainer>
   )

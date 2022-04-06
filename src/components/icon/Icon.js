@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, IconChildren } from './icon-style';
+import { Container } from './icon-style';
 
 const IconContainer = ({children, ...otherProps}) => {
   return(
