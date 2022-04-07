@@ -1,13 +1,10 @@
 import React from 'react';
 
-import './customButton.css';
+import { StyledButton } from './customButton-style.js';
 
-const CustomButton = ({children, productBtn, withGoogle,  ...otherProps}) => {
+const CustomButton = ({children, withGoogle,  ...otherProps}) => {
   return(
-    <button 
-      className={`customButton 
-        ${productBtn ? 'productBtn' : '' }`} 
-        {...otherProps}>{children}</button>
+    <StyledButton {...otherProps}>{children}</StyledButton>
   )
 }
 

@@ -1,17 +1,12 @@
 import React from 'react';
-import './formInput.css';
+import { Container, Label, Input } from './formInput-style.js';
 
 const FormInput = ({type, label, name}) => {
   return(
-    <div className='form-field'>
-      <label 
-        id={name} 
-        className='field-label'>{label}</label>
-      <input 
-        type={type}
-        name={name}
-        className='form-input' />
-    </div>
+    <Container>
+      <Label id={name} >{label}</Label>
+      <Input type={type} name={name}/>
+    </Container>
   )
 };
 
