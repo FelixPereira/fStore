@@ -2,7 +2,7 @@ import React from 'react';
 // import { ReactComponent as Logo } from '../../assets/logo.svg';
 import { NavLink } from 'react-router-dom'; 
 
-import './navigationMenu.css';
+import './navigationMenu-style.js';
 
 const NavigatioMenu = () => {
   return(

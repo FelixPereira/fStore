@@ -7,8 +7,7 @@ import { createStructuredSelector } from 'reselect';
 import { selectDisplay } from '../../redux/cart/cartSelectors';
 import { toggleSidebar } from '../../redux/sidebar/sidebarActions';
 import { useNavigate } from 'react-router-dom';
-
-import './header.css';
+import { Container, HumburgerIcon, RightSideIconsContainer } from './header-style';
 
 import SearchBar from '../searchBar/SearchBar';
 import CartIcon from '../cartIcon/CartIcon';
@@ -19,16 +18,16 @@ import IconContainer from '../icon/Icon';
 const Header = ({showSidebar, toggleSidebar}) => {
   const navigate = useNavigate();
   return(
-    <header className='header'>
-      <div className='humburger-icon' onClick={toggleSidebar}>
+    <Container>
+      <HumburgerIcon onClick={toggleSidebar}>
         <IconContainer>
           <HumburgerMenu className='icon' />
         </IconContainer>
-      </div>
+      </HumburgerIcon>
 
       <SearchBar />
 
-      <div className='rightside-icons'>
+      <RightSideIconsContainer>
         <CartIcon />
         <IconContainer 
           onClick={() => navigate('login')}>
@@ -37,8 +36,8 @@ const Header = ({showSidebar, toggleSidebar}) => {
         {
           showSidebar ? <CartDropdown /> : ''
         }
-      </div>
-    </header>
+      </RightSideIconsContainer>
+    </Container>
   )
 }
 
