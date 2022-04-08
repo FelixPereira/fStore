@@ -1,63 +1,69 @@
 import React from 'react';
 // import { ReactComponent as Logo } from '../../assets/logo.svg';
-import { NavLink } from 'react-router-dom'; 
-
-import './navigationMenu-style.js';
+import { 
+  Container,
+  LogoContainer,
+  Logo,
+  NavigationMenu,
+  Wrapper,
+  NavigationItem,
+  StyledNavLink,
+  MenuIcon } from './navigationMenu-style.js';
 
 const NavigatioMenu = () => {
   return(
-    <div className='navigationMenu'>
-      <NavLink to='/' className='navigationMenu_logo'>
-        <img src='/logo.png' alt='Logotipo' />
-      </NavLink>
+    <Container>
+      <LogoContainer to='/'>
+        <Logo src='/logo.png' alt='Logotipo' />
+      </LogoContainer>
 
-      <nav className='navigationMenu_links'>
-        <ul>
-          <li>
-            <NavLink to='/' className='naviLink' style={
+      <NavigationMenu>
+        <Wrapper>
+          <NavigationItem>
+            <StyledNavLink to='/' style={
               ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
-              <span>01</span>Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to='/loja' className='naviLink' style={
+              <MenuIcon>01</MenuIcon>Home
+            </StyledNavLink>
+          </NavigationItem>
+          <NavigationItem>
+            <StyledNavLink to='/loja' className='naviLink' style={
             ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
           }>
-            <span>02</span>Loja 
-          </NavLink>
-          </li>
-          <li>
-            <NavLink to='/loja/homens' className='naviLink' style={
+            <MenuIcon>02</MenuIcon>Loja 
+          </StyledNavLink>
+          </NavigationItem>
+          <NavigationItem>
+            <StyledNavLink to='/loja/homens' className='naviLink' style={
               ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
-              <span>03</span>Masculino 
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to='/loja/mulheres' className='naviLink' style={
+              <MenuIcon>03</MenuIcon>Masculino 
+            </StyledNavLink>
+          </NavigationItem>
+          <NavigationItem>
+            <StyledNavLink to='/loja/mulheres' className='naviLink' style={
               ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
-              <span>04</span>Feminino
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to='#' className='naviLink' style={
+              <MenuIcon>04</MenuIcon>Feminino
+            </StyledNavLink>
+          </NavigationItem>
+          <NavigationItem>
+            <StyledNavLink to='#' className='naviLink' style={
               ({isActive}) => isActive ? {color: '#b7a3da'} : {color: '#b7a3da'} 
             }>
-              <span>06</span>Contacto
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to='/login' className='naviLink' style={
+              <MenuIcon>06</MenuIcon>Contacto
+            </StyledNavLink>
+          </NavigationItem>
+          <NavigationItem>
+            <StyledNavLink to='/login' className='naviLink' style={
               ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
-              <span>07</span>Login
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-    </div>
+              <MenuIcon>07</MenuIcon>Login
+            </StyledNavLink>
+          </NavigationItem>
+        </Wrapper>
+      </NavigationMenu>
+    </Container>
   )
 }
 
