@@ -6,15 +6,15 @@ import { selectDisplay } from '../../redux/sidebar/sidebarSelector';
 
 import NavigationMenu from '../navigationMenu/NavigationMenu';
 
-import './sideBar.css';
+import { Container } from './sideBar-style.js';
 
 
 const SideBar = ({showSidebar}) => {
   return(
-    <aside className={`sideBar ${showSidebar && 'sidebar--visible'}`}>
+    <Container className={`${showSidebar && 'visible'}`}>
       <NavigationMenu />
       <WishList />
-    </aside>
+    </Container>
   )
 }
 

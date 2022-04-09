@@ -1,14 +1,17 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import styled from 'styled-components';
 import { selectShopProducts } from '../../redux/shop/shopSelector';
-
 import SectionPreview from '../sectionPreview/SectionPreview';
+
+
+const Container = styled.div``;
 
 const SectionOverview = ({homePage}) => {
   const products = useSelector(selectShopProducts);
 
   return(
-    <div className='collections-container'>
+    <Container>
       {
         products
         .slice(...(homePage ? [0, 3] : [1]))
@@ -20,7 +23,7 @@ const SectionOverview = ({homePage}) => {
             key={categoryId}/>
         ))
       }
-    </div>
+    </Container>
   )
 };
 

@@ -1,9 +1,12 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
 import Item from '../sectionItem/Item';
 
-import './sectionPreview.css';
+import { 
+  Container,
+  CategoryName,
+  ProductsList,
+  StyledLink } from './sectionPreview-style';
 
 
 const SectionPreview = ({
@@ -13,23 +16,26 @@ const SectionPreview = ({
   productPath, 
   categoryUrl}) => {
   return(
-    <div className='collection-preview'>
-      <h2 className='category-name' > 
-        <Link to={`${collectionPage ? '' : categoryUrl}`}> 
+    <Container>
+      <CategoryName> 
+        <StyledLink to={`${collectionPage ? '' : categoryUrl}`}> 
           {categoryName} 
-        </Link>
-      </h2>
+        </StyledLink>
+      </CategoryName>
 
-      <div className='products-list'>
+      <ProductsList>
         {
           items
           .slice(...(collectionPage ? [0] : [0, 5]))
           .map(item => (
-            <Item item={item} key={item.id} categoryUrl={categoryUrl} productPath={productPath} />
+            <Item item={item} 
+              key={item.id} 
+              categoryUrl={categoryUrl} 
+              productPath={productPath} />
           ))
         }
-      </div>
-    </div>
+      </ProductsList>
+    </Container>
   )
 };
 

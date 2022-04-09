@@ -2,21 +2,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 
-export const DetailTooltip = styled.span`
-  background-color: var(--main-color);
-  color: #ffffff;
-  padding: 10px;
-  position: absolute;
-  left: 45px;
-  font-size: 14px;
-  white-space: nowrap;
-  border-radius: 5px;
-  font-weight: bold;
-  display: none;
-`;
-
-export const AddtoCartTooltip = styled(DetailTooltip)``;
-
 export const IconsContainer = styled.div`
   width: 50px;
   height: 100px;
@@ -101,6 +86,21 @@ export const AddToCart = styled.div`
   position: absolute;
   bottom: 0;
 `;
+
+export const DetailTooltip = styled.span`
+  background-color: var(--main-color);
+  color: #ffffff;
+  padding: 10px;
+  position: absolute;
+  left: 45px;
+  font-size: 14px;
+  white-space: nowrap;
+  border-radius: 5px;
+  font-weight: bold;
+  display: none;
+`;
+
+export const AddtoCartTooltip = styled(DetailTooltip)``;
 
 export const StyledLink = styled(Link)`
   display: flex;

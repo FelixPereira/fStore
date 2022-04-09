@@ -47,7 +47,7 @@ const Item = ({item, categoryUrl, addItemToCart, addToWishList, productPath}) =>
           <IconContainer onClick={() => addToWishList(item)}>
             <HeartIcon/>
           </IconContainer>
-          <AddtoCartTooltip>Adicionar à lista de desejo </AddtoCartTooltip>
+          <AddtoCartTooltip>Adicionar à lista de desejos </AddtoCartTooltip>
         </AddToCartContainer>
         <StyledLink to={`${categoryUrl}/${productUrl}`}> 
           <IconContainer>
