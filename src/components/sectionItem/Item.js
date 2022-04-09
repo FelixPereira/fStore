@@ -5,8 +5,20 @@ import { ReactComponent as ViewProduct } from '../../assets/eye.svg';
 import { connect } from 'react-redux';
 import { addItemToCart } from '../../redux/cart/cartActions';
 import { addToWishList } from '../../redux/wishList/wishListAction';
+import { 
+  Container,
+  IconsContainer,
+  ProductImage,
+  ProductInfoContainer,
+  ProductInfo,
+  ProductName,
+  ProductPrice,
+  AddToCart,
+  AddtoCartTooltip,
+  DetailTooltip,
+  AddToCartContainer,
+  StyledLink } from './item-style';
 
-import './item.css';
 
 import CustomButton from '../customButton/CustomButton';
 import IconContainer from '../icon/Icon';
@@ -17,40 +29,34 @@ const Item = ({item, categoryUrl, addItemToCart, addToWishList, productPath}) =>
   const productUrl = name.split(' ').join('-').toLowerCase();
 
   return(
-    <div className='product-item'>
-      <div 
-        style={{backgroundImage: `url(${productImage})`}}
-        className='product-image' />
-      <div className='product-info-container'>
-        <div className='product-info'>
-          <h3 className='product-name'>{name}</h3>
-          <span className='product-price'>{price} Kz</span>
-        </div>
-        <div className='cartToCart-btn'>
-          <CustomButton 
-            productBtn 
-            onClick={() => addItemToCart(item)}> Adicionar ao carrinho</CustomButton>
-        </div>
-      </div>
-
-
-
-      <div className='icons-container'>
-        <IconContainer onClick={() => addToWishList(item)}>
-          <HeartIcon 
-            title='Adicionar à lista de desejos'
-             />
-        </IconContainer>
-
-        <Link to={`${categoryUrl}/${productUrl}`}> 
-          <IconContainer>
-            <ViewProduct 
-              className='icon'
-              title='Ver os detalhes' />
+    <Container>
+      <ProductImage style={{backgroundImage: `url(${productImage})`}} />
+      <ProductInfoContainer>
+        <ProductInfo>
+          <ProductName>{name}</ProductName>
+          <ProductPrice>{price} Kz</ProductPrice>
+        </ProductInfo>
+        <AddToCart>
+          <CustomButton productBtn onClick={() => addItemToCart(item)}>
+            Adicionar ao carrinho
+          </CustomButton>
+        </AddToCart>
+      </ProductInfoContainer>
+      <IconsContainer>
+        <AddToCartContainer>
+          <IconContainer onClick={() => addToWishList(item)}>
+            <HeartIcon/>
           </IconContainer>
-        </Link>
-      </div>
-    </div>
+          <AddtoCartTooltip>Adicionar à lista de desejo </AddtoCartTooltip>
+        </AddToCartContainer>
+        <StyledLink to={`${categoryUrl}/${productUrl}`}> 
+          <IconContainer>
+            <ViewProduct className='icon' />
+          </IconContainer>
+          <DetailTooltip>Ver detalhes</DetailTooltip>
+        </StyledLink>
+      </IconsContainer>
+    </Container>
 )}
 
 const mapDispatchToProps = dispatch => ({
