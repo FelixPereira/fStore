@@ -6,7 +6,15 @@ import { addItemToCart } from '../../redux/cart/cartActions';
 import { deleteFromWishList } from '../../redux/wishList/wishListAction';
 import IconContainer from '../icon/Icon';
 
-import './wishList-Cart-item.css';
+import { 
+  Container,
+  IconsContainer,
+  Product,
+  ImgContainer,
+  Image,
+  ProductInfo,
+  ProductName,
+  ProductPrice } from './wishList-Cart-item-style.js';
 
 const SmallItem = ({
   cartItem, 
@@ -16,21 +24,21 @@ const SmallItem = ({
   }) => {
   const {name, price, quantity, productImage} = item;
   return(
-    <div className='item-container'>
-      <div className='item'>
-        <div className='img-container'>
-          <img src={productImage} alt={name} />
-        </div>
-        <div className='item-info'>
-          <p className='item-name'>{name}</p>
-          <span className='item-price'>
+    <Container>
+      <Product>
+        <ImgContainer>
+          <Image src={productImage} alt={name} />
+        </ImgContainer>
+        <ProductInfo>
+          <ProductName>{name}</ProductName>
+          <ProductPrice>
             { cartItem && `${quantity} x ` } 
             {price}
-          </span>
-        </div>
-      </div>
+          </ProductPrice>
+        </ProductInfo>
+      </Product>
       { cartItem || 
-        <div className='wishlist-icons'>
+        <IconsContainer>
           <IconContainer 
             wishlist
             onClick={() => addItemToCart(item)}>
@@ -41,9 +49,9 @@ const SmallItem = ({
             onClick={() => deleteFromWishList(item)}>
               <RemoveFromWishlistIcon className='icon' />
           </IconContainer>
-        </div>
+        </IconsContainer>
       }
-    </div>
+    </Container>
   )
 }
 

@@ -1,15 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import './wishList.css';
+import {
+  Container,
+  Title,
+  WhishlistItemsContainer } from './wishList-style';
 
 import SmallItem from '../wishList-cart-item/wishList-Cart-item';
 
 const WishList = ({wishListItems}) => {
   return(
-    <div className='wishList'>
-      <h2 className='wishList-title'>Lista de desejos</h2>
-      <div className='wishListItems-container'>
+    <Container>
+      <Title>Lista de desejos</Title>
+      <WhishlistItemsContainer>
         {
           wishListItems
           .filter((wishListItem, idx) => idx < 10)
@@ -17,8 +20,8 @@ const WishList = ({wishListItems}) => {
             <SmallItem key={wishListItem.id} item={wishListItem}/>
           ))
         }
-      </div>
-    </div>
+      </WhishlistItemsContainer>
+    </Container>
   )
 }
 
