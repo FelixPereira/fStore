@@ -1,48 +1,57 @@
 import React from 'react';
-import './login-signin.css';
+import { 
+  Container,
+  Wrapper,
+  FormHeader,
+  FormTitle,
+  FormMessage,
+  FormBody,
+  Form,
+  InputContainer,
+  ButtonsContainer } from './login-signin-style.js';
 import FormInput from '../../components/formInput/FormInput';
 import CustomButton from '../../components/customButton/CustomButton';
 
 const LoginSigninPage = () => {
   return(
-    <div className='login-signin'>
-      <div className='login'>
-        <div className='login-signin--header'>
-          <h3>Já tenho uma conta</h3>
-          <span>Inicie sessão com o seu email e senha</span>
-        </div>
-        <div className='login-signin--body'>
-          <form>
-            <div className='form-input-grup'>
+    <Container>
+      <Wrapper className='login'>
+        <FormHeader>
+          <FormTitle>Já tenho uma conta</FormTitle>
+          <FormMessage>Inicie sessão com o seu email e senha</FormMessage>
+        </FormHeader>
+        <FormBody>
+          <Form>
+            <InputContainer>
               <FormInput name='email' label='Email' type='email'/>
               <FormInput name='password' label='Senha' type='password'/>
-            </div>
-            <div className='form-buttons'>
+            </InputContainer>
+            <ButtonsContainer>
               <CustomButton> Login </CustomButton>
               <CustomButton> Login com o Google </CustomButton>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div className='signup'>
-        <div className='login-signin--header'>
-          <h3>Ainda não tenho uma conta</h3>
-          <span>Crie uma conta</span>
-        </div>
-        <div className='login-signin--body'>
-          <form>
-            <div className='form-input-grup'>
+            </ButtonsContainer>
+          </Form>
+        </FormBody>
+      </Wrapper>
+      <Wrapper>
+        <FormHeader>
+          <FormTitle>Ainda não tenho uma conta</FormTitle>
+          <FormMessage>Crie uma conta</FormMessage>
+        </FormHeader>
+        <FormBody>
+          <Form>
+            <InputContainer>
               <FormInput name='email' label='Email' type='email'/>
               <FormInput name='password' label='Senha' type='password'/>
               <FormInput name='confirmPassword' label='Confirmar a senha' type='password'/>
-            </div>
-            <div className='form-buttons'>
+            </InputContainer>
+            <ButtonsContainer>
               <CustomButton> Criar conta </CustomButton>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+            </ButtonsContainer>
+          </Form>
+        </FormBody>
+      </Wrapper>
+    </Container>
   )
 };
 

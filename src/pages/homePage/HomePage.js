@@ -1,17 +1,15 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-
-import './homePage.css';
-
+import { Container } from './homePage-style';
 import SideBar from '../../components/sideBar/SideBar';
 
 
 const HomePage = () => {
   return(
-    <div className='homePage'>
+    <Container>
       <SideBar />
       <Outlet />
-    </div>
+    </Container>
   )
 };
 
