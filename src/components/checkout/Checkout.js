@@ -22,7 +22,13 @@ import {
   ProductPrice,
   QuantityContainer,
   Arrow,
-  Quantity
+  Quantity,
+  CheckoutContainer,
+  TotalAmount,
+  OrderSummary,
+  TotalText,
+  PaymentInfoContainer,
+  PaymentInfo
   } from './checkout-style.js';
 
 const Checkout = ({
@@ -34,34 +40,12 @@ const Checkout = ({
   priceTotal
   }) => {
   return(
-  /*
-        <div className='subtotal'>
-          <h2>Total: {total} Kz</h2>
-          {
-            total > 0 ?
-              <>
-                <StripeCheckoutButton price={total} />
-
-                <div className='payment-info'>
-                  <h2>Dados do cartão de crádito para testar o pagamento</h2>
-                  <h3>Número do cartão: 4242 4242 4242 4242</h3>
-                  <h4>MM / YY: 12/25</h4>
-                  <h4>CVC: 123</h4>
-                </div>
-              </>
-            : null
-          }          
-      </div>
-      </div>
-    </div>
-  */
-
     <Container>
-      {
-        cartItems.map(cartItem => {
-          const {name, price, price2, productImage, quantity} = cartItem;
-          return (
-            <Wrapper>
+      <Wrapper>
+        {
+          cartItems.map(cartItem => {
+            const {name, price, price2, productImage, quantity} = cartItem;
+            return (
               <Product>
                 <ImageContainer>
                   <Image src={productImage} />
@@ -77,10 +61,33 @@ const Checkout = ({
                 </QuantityContainer>
                 <Arrow onClick={() => deleteItemFromCart(cartItem)}>&#10005;</Arrow>
               </Product>
-            </Wrapper>
             )
           })
-      }
+        }
+      </Wrapper>
+      <CheckoutContainer>
+        <OrderSummary>
+          <TotalText>Total a pagar:</TotalText>
+          <TotalAmount>{total}</TotalAmount>
+        </OrderSummary>
+
+        <PaymentInfoContainer>
+          {
+            total > 0 ?
+              <>
+                <StripeCheckoutButton price={total} />
+
+                <PaymentInfo>
+                  <p>Dados do cartão de crédito para testar o pagamento</p>
+                  <h3>Número do cartão: 4242 4242 4242 4242</h3>
+                  <h4>MM / YY: 12/25</h4>
+                  <h4>CVC: 123</h4>
+                </PaymentInfo>
+              </>
+            : null
+          }          
+        </PaymentInfoContainer>
+      </CheckoutContainer>
     </Container>
   )
 };

@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 1000px;
   padding-top: 50px;
   margin: 0 auto;
 `;
 
 export const Wrapper = styled.div`
-
+  width: 50%;
 `;
 
 export const Product = styled.div`
@@ -16,7 +19,7 @@ export const Product = styled.div`
   justify-content: space-between;
   margin-bottom: 30px;
   background-color: #fff;
-  width: 50%;
+  width: 100%;
   border-radius: 30px;
   padding-right: 50px;
 `;
@@ -79,4 +82,53 @@ export const Arrow = styled.div`
     transition: .2s;
   }
 `;
+
+export const CheckoutContainer = styled.div`
+  width: 30%;
+  height: 300px;
+  border: 1px solid #fff;
+  padding: 30px;
+
+`;
+
+export const TotalAmount = styled.h2`
+  color: #fff;
+`;
+
+export const OrderSummary = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+`;
+
+export const TotalText = styled.h3`
+  color: #fff;
+  margin-right: 20px;
+`;
+
+export const PaymentInfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const PaymentInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+`;
+
+/*
+
+
+
+export const CheckoutContainer = styled.div`
+
+`;
+
+*/
+
+
 
