@@ -29,9 +29,11 @@ export const Container = styled.div`
   }
 `;
 
-export const MainContent = styled.div`
+export const Wrapper = styled.div`
   padding: 30px;
 `;
+
+export const MainContent = styled.main``;
 
 export const Rodape = styled.footer`
   background-color: #fff;

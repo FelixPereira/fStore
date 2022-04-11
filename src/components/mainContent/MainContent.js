@@ -1,6 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectDisplay } from '../../redux/sidebar/sidebarSelector';
 import { toggleSidebar } from '../../redux/sidebar/sidebarActions';
 import { Outlet } from 'react-router-dom';
@@ -10,36 +9,30 @@ import Backdrop from '../backdrop/Backdrop';
 
 import { 
   Container, 
+  Wrapper,
   MainContent, 
   Rodape,
   RodapeText } from './mainContent-style.js';
 
   
-const Section = ({displaySidebar, toggleSidebar}) => {
+const Section = () => {
+  const dispatch = useDispatch();
+  const displaySidebar = useSelector(selectDisplay);
   return(
     <Container>
-      <MainContent>
-        { displaySidebar && <Backdrop onClick={toggleSidebar} /> }
+      <Wrapper>
+        { displaySidebar && <Backdrop onClick={() => dispatch(toggleSidebar())} /> }
 
         <Header />
-        <main>
+        <MainContent>
           <Outlet />
-        </main>
-      </MainContent>
+        </MainContent>
+      </Wrapper>
       <Rodape>
         <RodapeText>Made with LOVE by Félix Pereira</RodapeText>
       </Rodape>
     </Container>
-
   )
 };
 
-const mapStateToProps = createStructuredSelector({
-  displaySidebar: selectDisplay
-});
-
-const mapDispatchToProps = dispatch => ({
-  toggleSidebar: () => dispatch(toggleSidebar())
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Section);
+export default Section;

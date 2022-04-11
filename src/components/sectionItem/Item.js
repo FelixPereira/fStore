@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as HeartIcon } from '../../assets/heart.svg';
 import { ReactComponent as ViewProduct } from '../../assets/eye.svg';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { addItemToCart } from '../../redux/cart/cartActions';
 import { addToWishList } from '../../redux/wishList/wishListAction';
 import { 
@@ -24,10 +24,10 @@ import CustomButton from '../customButton/CustomButton';
 import IconContainer from '../icon/Icon';
 
 
-const Item = ({item, categoryUrl, addItemToCart, addToWishList, productPath}) => {
+const Item = ({item, categoryUrl, productPath}) => {
   const {name, price, productImage} = item;
   const productUrl = name.split(' ').join('-').toLowerCase();
-
+  const dispatch = useDispatch();
   return(
     <Container>
       <ProductImage style={{backgroundImage: `url(${productImage})`}} />
@@ -37,14 +37,14 @@ const Item = ({item, categoryUrl, addItemToCart, addToWishList, productPath}) =>
           <ProductPrice>{price} Kz</ProductPrice>
         </ProductInfo>
         <AddToCart>
-          <CustomButton productBtn onClick={() => addItemToCart(item)}>
+          <CustomButton productBtn onClick={() => dispatch(addItemToCart(item))}>
             Adicionar ao carrinho
           </CustomButton>
         </AddToCart>
       </ProductInfoContainer>
       <IconsContainer>
         <AddToCartContainer>
-          <IconContainer onClick={() => addToWishList(item)}>
+          <IconContainer onClick={() => dispatch(addToWishList(item))}>
             <HeartIcon/>
           </IconContainer>
           <AddtoCartTooltip>Adicionar à lista de desejos </AddtoCartTooltip>
@@ -59,9 +59,5 @@ const Item = ({item, categoryUrl, addItemToCart, addToWishList, productPath}) =>
     </Container>
 )}
 
-const mapDispatchToProps = dispatch => ({
-  addItemToCart: item => dispatch(addItemToCart(item)),
-  addToWishList: item => dispatch(addToWishList(item))
-})
 
-export default connect(null, mapDispatchToProps)(Item);
+export default Item;

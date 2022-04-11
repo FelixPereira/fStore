@@ -85,7 +85,7 @@ export const Arrow = styled.div`
 
 export const CheckoutContainer = styled.div`
   width: 30%;
-  height: 300px;
+  height: 350px;
   border: 1px solid #fff;
   padding: 30px;
 
@@ -118,17 +118,21 @@ export const PaymentInfo = styled.div`
   flex-direction: column;
   align-items: center;
   color: #fff;
+  margin-top: 20px;
+  text-align: center;
 `;
 
-/*
-
-
-
-export const CheckoutContainer = styled.div`
-
+export const Title = styled.div`
+  font-size: 18px;
 `;
 
-*/
+export const CardNumber = styled.div`
+  margin-top: 20px;
+  font-size: 16px;
+`;
+
+export const Date = styled(CardNumber)``;
+export const Cvc = styled(CardNumber)``;
 
 
 

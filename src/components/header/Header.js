@@ -2,8 +2,8 @@ import React from 'react';
 import { ReactComponent as HumburgerMenu } from '../../assets/humburger-menu.svg';
 // import { ReactComponent as CloseMenu } from '../../assets/cross.svg';
 import { ReactComponent as AvatarIcon } from '../../assets/user.svg';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { selectDisplay } from '../../redux/cart/cartSelectors';
 import { toggleSidebar } from '../../redux/sidebar/sidebarActions';
 import { useNavigate } from 'react-router-dom';
@@ -15,11 +15,13 @@ import CartDropdown from '../cartDropdown/CartDropdown';
 import IconContainer from '../icon/Icon';
 
 
-const Header = ({showSidebar, toggleSidebar}) => {
+const Header = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const showSidebar = useSelector(selectDisplay);
   return(
     <Container>
-      <HumburgerIcon onClick={toggleSidebar}>
+      <HumburgerIcon onClick={() => dispatch(toggleSidebar())}>
         <IconContainer>
           <HumburgerMenu className='icon' />
         </IconContainer>
@@ -41,13 +43,4 @@ const Header = ({showSidebar, toggleSidebar}) => {
   )
 }
 
-const mapStateToProps = createStructuredSelector({
-  showSidebar: selectDisplay
-});
-
-const mapDispatchToProps = dispatch => ({
-  toggleSidebar: () => dispatch(toggleSidebar())
-});
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header;

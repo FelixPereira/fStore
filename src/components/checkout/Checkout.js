@@ -1,6 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
+import { useDispatch, useSelector } from 'react-redux';
 import { 
   selectCartItems, 
   selectTotal, 
@@ -23,28 +22,29 @@ import {
   QuantityContainer,
   Arrow,
   Quantity,
-  CheckoutContainer,
+  CheckoutContainer, 
   TotalAmount,
   OrderSummary,
   TotalText,
   PaymentInfoContainer,
-  PaymentInfo
-  } from './checkout-style.js';
+  PaymentInfo,
+  Title,
+  CardNumber,
+  Date,
+  Cvc } from './checkout-style.js';
 
-const Checkout = ({
-  cartItems, 
-  addItemToCart, 
-  deleteItemFromCart,
-  decreaseItemQuantity,
-  total,
-  priceTotal
-  }) => {
+const Checkout = () => {
+  const dispatch = useDispatch();
+  const cartItems = useSelector(selectCartItems);
+  const total = useSelector(selectTotal);
+  const priceTotal = useSelector(selectPriceTotal);
+
   return(
     <Container>
       <Wrapper>
         {
           cartItems.map(cartItem => {
-            const {name, price, price2, productImage, quantity} = cartItem;
+            const {name, price, productImage, quantity} = cartItem;
             return (
               <Product>
                 <ImageContainer>
@@ -55,11 +55,11 @@ const Checkout = ({
                   <ProductPrice>{price}</ProductPrice>
                 </InfoContainer>
                 <QuantityContainer>
-                  <Arrow onClick={() => decreaseItemQuantity(cartItem)}>&#10094;</Arrow>
+                  <Arrow onClick={() => dispatch(decreaseItemQuantity(cartItem))}>&#10094;</Arrow>
                   <Quantity>{quantity}</Quantity>
-                  <Arrow onClick={() => addItemToCart(cartItem)}>&#10095;</Arrow>
+                  <Arrow onClick={() => dispatch(addItemToCart(cartItem))}>&#10095;</Arrow>
                 </QuantityContainer>
-                <Arrow onClick={() => deleteItemFromCart(cartItem)}>&#10005;</Arrow>
+                <Arrow onClick={() => dispatch(deleteItemFromCart(cartItem))}>&#10005;</Arrow>
               </Product>
             )
           })
@@ -70,7 +70,6 @@ const Checkout = ({
           <TotalText>Total a pagar:</TotalText>
           <TotalAmount>{total}</TotalAmount>
         </OrderSummary>
-
         <PaymentInfoContainer>
           {
             total > 0 ?
@@ -78,10 +77,10 @@ const Checkout = ({
                 <StripeCheckoutButton price={total} />
 
                 <PaymentInfo>
-                  <p>Dados do cartão de crédito para testar o pagamento</p>
-                  <h3>Número do cartão: 4242 4242 4242 4242</h3>
-                  <h4>MM / YY: 12/25</h4>
-                  <h4>CVC: 123</h4>
+                  <Title>Dados do cartão de crédito para testar o pagamento:</Title>
+                  <CardNumber>Número do cartão: 4242 4242 4242 4242</CardNumber>
+                  <Date>MM / YY: 12/25</Date>
+                  <Cvc>CVC: 123</Cvc>
                 </PaymentInfo>
               </>
             : null
@@ -92,16 +91,5 @@ const Checkout = ({
   )
 };
 
-const mapStateToProps = createStructuredSelector({
-  cartItems: selectCartItems,
-  total: selectTotal,
-  priceTotal: selectPriceTotal
-});
 
-const mapDispatchToProps = dispatch => ({
-  addItemToCart: cartItem => dispatch(addItemToCart(cartItem)),
-  deleteItemFromCart: cartItem => dispatch(deleteItemFromCart(cartItem)),
-  decreaseItemQuantity: cartItem => dispatch(decreaseItemQuantity(cartItem))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Checkout);
+export default Checkout;
