@@ -1,67 +1,80 @@
-import React from  'react';
+import React, { useState, useCallback } from  'react';
 import { useParams } from 'react-router-dom'; 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { selectShopProduct } from '../../redux/shop/shopSelector';
 import CustomButton from '../../components/customButton/CustomButton';
 import { ReactComponent as HeartIcon } from '../../assets/heart.svg';
 import IconContainer from '../../components/icon/Icon';
+import { addItemToCart, decreaseItemQuantity } from '../../redux/cart/cartActions';
+import { addToWishList } from '../../redux/wishList/wishListAction';
 import { 
   ProductPageContainer,
   ProductImageContainer,
-  ProductInfoContainer,
+  Image,
+  ProductInfo,
   ProductName,
   ProductPrice,
   QuantityContainer,
   Arrow,
   ArrowContainer,
+  Wrapper,
   ButtonsContainer,
-  BtnContainer,
-  RightContainer} from './singleProductPageStyle';
+  ProductInfoContainer,
+  BtnAddToCart} from './singleProductPageStyle';
 
 
 const SingleProductPage = () => {
   const { categoryUrl, productUrl } = useParams();
   const shopProduct = useSelector(selectShopProduct(categoryUrl, productUrl));
   const {name, productImage, price, quantity} = shopProduct;
+  const dispatch = useDispatch();
+  const [ itemquantity, setitemQuantity ] = useState(0);
 
-  console.log(shopProduct);
+
+  const increaseQuantityHandler = useCallback(() => {
+    setitemQuantity(prev => prev + 1);
+  }, []);
+
+  const decreaseQuantityHandler = () => {
+    return itemquantity === 0 ? itemquantity : setitemQuantity(itemquantity - 1);
+  };
+
+  console.log(increaseQuantityHandler);
 
   return(
     <ProductPageContainer>
       <ProductImageContainer>
-        <img 
-          className='product-image' 
-          src={`${productImage}`} 
-          alt={`${name}`} />
+        <Image src={`${productImage}`} alt={`${name}`} />
       </ProductImageContainer>
       
-      <RightContainer>
-        <ProductInfoContainer>
+      <ProductInfoContainer>
+        <ProductInfo>
           <ProductName>{name}</ProductName>
           <ProductPrice>{price}</ProductPrice>
-        </ProductInfoContainer>
+        </ProductInfo>
 
-        <ButtonsContainer>
+        <Wrapper>
           <QuantityContainer>
-            <ArrowContainer>
+            <ArrowContainer onClick={decreaseQuantityHandler}>
               <Arrow>&#10094;</Arrow>
             </ArrowContainer>
-            <ArrowContainer>5</ArrowContainer>
-            <ArrowContainer>
+            <ArrowContainer>{itemquantity}</ArrowContainer>
+            <ArrowContainer onClick={increaseQuantityHandler}>
               <Arrow>&#10095;</Arrow>
             </ArrowContainer>
           </QuantityContainer>
-          <BtnContainer>
-            <CustomButton productBtn>Adicionar ao carrinho</CustomButton>
-            <IconContainer className='icon-container'>
+          <ButtonsContainer>
+            <BtnAddToCart 
+              onClick={() => dispatch(addItemToCart(shopProduct))} 
+              productBtn>Adicionar ao carrinho</BtnAddToCart>
+            <IconContainer onClick={() => dispatch(addToWishList(shopProduct))}>
               <HeartIcon 
                 className='icon' 
                 title='Adicionar à lista de desejos' />
             </IconContainer>
-          </BtnContainer>
-        </ButtonsContainer>
-        
-      </RightContainer>
+          </ButtonsContainer>
+        </Wrapper>
+      </ProductInfoContainer>
     </ProductPageContainer>
   )
 };

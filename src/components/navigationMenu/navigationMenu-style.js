@@ -37,8 +37,4 @@ export const MenuIcon = styled.span`
 export const StyledNavLink = styled(NavLink)`
   color: #b7a3da;
   text-decoration: none;
-
-  &: {
-    color: red;
-  }
 `;

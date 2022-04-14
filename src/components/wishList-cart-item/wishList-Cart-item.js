@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { ReactComponent as AddToCartIcon } from '../../assets/cart-add.svg';
 import { ReactComponent as RemoveFromWishlistIcon } from '../../assets/cross.svg';
 import { addItemToCart } from '../../redux/cart/cartActions';
@@ -18,11 +18,10 @@ import {
 
 const SmallItem = ({
   cartItem, 
-  item, 
-  addItemToCart, 
-  deleteFromWishList
+  item
   }) => {
   const {name, price, quantity, productImage} = item;
+  const dispatch = useDispatch();
   return(
     <Container>
       <Product>
@@ -41,12 +40,12 @@ const SmallItem = ({
         <IconsContainer>
           <IconContainer 
             wishlist
-            onClick={() => addItemToCart(item)}>
+            onClick={() => dispatch(addItemToCart(item))}>
               <AddToCartIcon className='icon'/>
           </IconContainer>
           <IconContainer 
             wishlist
-            onClick={() => deleteFromWishList(item)}>
+            onClick={() => dispatch(deleteFromWishList(item))}>
               <RemoveFromWishlistIcon className='icon' />
           </IconContainer>
         </IconsContainer>
@@ -55,8 +54,4 @@ const SmallItem = ({
   )
 }
 
-const mapDispatchToProps = dispatch => ({
-  addItemToCart: item => dispatch(addItemToCart(item)),
-  deleteFromWishList: item => dispatch(deleteFromWishList(item))
-});
-export default connect(null, mapDispatchToProps)(SmallItem);
+export default SmallItem;

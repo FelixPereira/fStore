@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import CustomButton from './../../components/customButton/CustomButton';
 
 export const ProductPageContainer = styled.div`
   display: flex;
@@ -32,12 +33,14 @@ export const ProductImageContainer = styled.div`
   }
 `;
 
-export const RightContainer = styled.div`
+export const Image = styled.img``;
+
+export const ProductInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-export const ProductInfoContainer = styled.div`
+export const ProductInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,7 +93,7 @@ export const Arrow = styled.span`
   color: #fff;
 `;
 
-export const ButtonsContainer = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -99,6 +102,10 @@ export const ButtonsContainer = styled.div`
   }
 `;
 
-export const BtnContainer = styled.div`
+export const ButtonsContainer = styled.div`
   display: flex;
+`;
+
+export const BtnAddToCart = styled(CustomButton)`
+  margin-right: 0.625rem;
 `;

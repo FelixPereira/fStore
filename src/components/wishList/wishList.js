@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import {
   Container,
@@ -8,7 +8,8 @@ import {
 
 import SmallItem from '../wishList-cart-item/wishList-Cart-item';
 
-const WishList = ({wishListItems}) => {
+const WishList = () => {
+  const wishListItems = useSelector(({wishList: {wishListItems}}) => wishListItems);
   return(
     <Container>
       <Title>Lista de desejos</Title>
@@ -25,8 +26,4 @@ const WishList = ({wishListItems}) => {
   )
 }
 
-const mapStateToProps = ({wishList: {wishListItems}}) => ({
-  wishListItems: wishListItems
-});
-
-export default connect(mapStateToProps)(WishList);
+export default WishList;

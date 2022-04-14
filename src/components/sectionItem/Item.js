@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as HeartIcon } from '../../assets/heart.svg';
 import { ReactComponent as ViewProduct } from '../../assets/eye.svg';
-import { connect, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addItemToCart } from '../../redux/cart/cartActions';
 import { addToWishList } from '../../redux/wishList/wishListAction';
 import { 

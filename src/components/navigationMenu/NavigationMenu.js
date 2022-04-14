@@ -1,5 +1,6 @@
 import React from 'react';
 // import { ReactComponent as Logo } from '../../assets/logo.svg';
+import { NavLink } from 'react-router-dom';
 import { 
   Container,
   LogoContainer,
@@ -7,7 +8,6 @@ import {
   NavigationMenu,
   Wrapper,
   NavigationItem,
-  StyledNavLink,
   MenuIcon } from './navigationMenu-style.js';
 
 const NavigatioMenu = () => {
@@ -20,46 +20,46 @@ const NavigatioMenu = () => {
       <NavigationMenu>
         <Wrapper>
           <NavigationItem>
-            <StyledNavLink to='/' style={
+            <NavLink to='/' style={
               ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
               <MenuIcon>01</MenuIcon>Home
-            </StyledNavLink>
+            </NavLink>
           </NavigationItem>
           <NavigationItem>
-            <StyledNavLink to='/loja' className='naviLink' style={
+            <NavLink to='/loja' className='naviLink' style={
             ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
           }>
             <MenuIcon>02</MenuIcon>Loja 
-          </StyledNavLink>
+          </NavLink>
           </NavigationItem>
           <NavigationItem>
-            <StyledNavLink to='/loja/homens' className='naviLink' style={
+            <NavLink to='/loja/homens' className='naviLink' style={
               ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
               <MenuIcon>03</MenuIcon>Masculino 
-            </StyledNavLink>
+            </NavLink>
           </NavigationItem>
           <NavigationItem>
-            <StyledNavLink to='/loja/mulheres' className='naviLink' style={
+            <NavLink to='/loja/mulheres' className='naviLink' style={
               ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
               <MenuIcon>04</MenuIcon>Feminino
-            </StyledNavLink>
+            </NavLink>
           </NavigationItem>
           <NavigationItem>
-            <StyledNavLink to='#' className='naviLink' style={
+            <NavLink to='#' className='naviLink' style={
               ({isActive}) => isActive ? {color: '#b7a3da'} : {color: '#b7a3da'} 
             }>
               <MenuIcon>06</MenuIcon>Contacto
-            </StyledNavLink>
+            </NavLink>
           </NavigationItem>
           <NavigationItem>
-            <StyledNavLink to='/login' className='naviLink' style={
+            <NavLink to='/login' className='naviLink' style={
               ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
               <MenuIcon>07</MenuIcon>Login
-            </StyledNavLink>
+            </NavLink>
           </NavigationItem>
         </Wrapper>
       </NavigationMenu>
