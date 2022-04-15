@@ -4,9 +4,10 @@ export const toggleDropdown = () => ({
   type: cartActionTypes.TOGGLE_DROPDOWN
 });
 
-export const addItemToCart = item => ({
+export const addItemToCart = (item, amount) => ({
   type: cartActionTypes.ADD_ITEM,
-  payload: item
+  payload: item,
+  quantity: amount
 });
 
 export const deleteItemFromCart = item => ({

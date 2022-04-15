@@ -2,11 +2,10 @@ import React, { useState, useCallback } from  'react';
 import { useParams } from 'react-router-dom'; 
 import { useSelector, useDispatch } from 'react-redux';
 import { selectShopProduct } from '../../redux/shop/shopSelector';
-import CustomButton from '../../components/customButton/CustomButton';
 import { ReactComponent as HeartIcon } from '../../assets/heart.svg';
-import IconContainer from '../../components/icon/Icon';
-import { addItemToCart, decreaseItemQuantity } from '../../redux/cart/cartActions';
+import { addItemToCart } from '../../redux/cart/cartActions';
 import { addToWishList } from '../../redux/wishList/wishListAction';
+import IconContainer from '../../components/icon/Icon';
 import { 
   ProductPageContainer,
   ProductImageContainer,
@@ -28,15 +27,14 @@ const SingleProductPage = () => {
   const shopProduct = useSelector(selectShopProduct(categoryUrl, productUrl));
   const {name, productImage, price, quantity} = shopProduct;
   const dispatch = useDispatch();
-  const [ itemquantity, setitemQuantity ] = useState(0);
-
+  const [ itemquantity, setitemQuantity ] = useState(1);
 
   const increaseQuantityHandler = useCallback(() => {
     setitemQuantity(prev => prev + 1);
   }, []);
 
   const decreaseQuantityHandler = () => {
-    return itemquantity === 0 ? itemquantity : setitemQuantity(itemquantity - 1);
+    return itemquantity === 1 ? 1 : setitemQuantity(itemquantity - 1);
   };
 
 
@@ -64,7 +62,7 @@ const SingleProductPage = () => {
           </QuantityContainer>
           <ButtonsContainer>
             <BtnAddToCart 
-              onClick={() => dispatch(addItemToCart(shopProduct))} 
+              onClick={() => dispatch(addItemToCart(shopProduct, itemquantity))} 
               productBtn>Adicionar ao carrinho</BtnAddToCart>
             <IconContainer onClick={() => dispatch(addToWishList(shopProduct))}>
               <HeartIcon 

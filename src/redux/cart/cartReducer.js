@@ -22,7 +22,7 @@ const cartReducer = (state = INITIAL_STATE, action) => {
       console.log(state.cartItems)
       return {
         ...state,
-        cartItems: addItemToCart(state.cartItems, action.payload)
+        cartItems: addItemToCart(state.cartItems, action.payload, action.quantity)
       };
 
     case cartActionTypes.DECREASE_ITEM_QUANTITY:

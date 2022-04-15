@@ -44,7 +44,7 @@ const Product = ({product, categoryUrl, productPath}) => {
           <ProductPrice>{price} Kz</ProductPrice>
         </ProductInfo>
         <AddToCart>
-          <CustomButton productBtn onClick={() => dispatch(addItemToCart(product))}>
+          <CustomButton productBtn onClick={() => dispatch(addItemToCart(product, 1))}>
             Adicionar ao carrinho
           </CustomButton>
         </AddToCart>

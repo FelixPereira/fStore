@@ -27,7 +27,7 @@ const StipeCheckoutButton = ({ price }) => {
       shippingAddress
     >
 
-    <CustomButton>Pagar agora</CustomButton>
+    <CustomButton productBtn>Pagar agora</CustomButton>
   </StripeCheckout>
   )
 }

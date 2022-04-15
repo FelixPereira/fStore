@@ -86,8 +86,10 @@ export const Arrow = styled.div`
 export const CheckoutContainer = styled.div`
   width: 30%;
   height: 350px;
-  border: 1px solid #fff;
-  padding: 30px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  padding: 30px 15px;
+  border: solid 1px #fff;
 
 `;
 
@@ -118,7 +120,7 @@ export const PaymentInfo = styled.div`
   flex-direction: column;
   align-items: center;
   color: #fff;
-  margin-top: 20px;
+  margin-top: 40px;
   text-align: center;
 `;
 

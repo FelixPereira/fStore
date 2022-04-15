@@ -57,7 +57,7 @@ const Checkout = () => {
                 <QuantityContainer>
                   <Arrow onClick={() => dispatch(decreaseItemQuantity(cartItem))}>&#10094;</Arrow>
                   <Quantity>{quantity}</Quantity>
-                  <Arrow onClick={() => dispatch(addItemToCart(cartItem))}>&#10095;</Arrow>
+                  <Arrow onClick={() => dispatch(addItemToCart(cartItem, 1))}>&#10095;</Arrow>
                 </QuantityContainer>
                 <Arrow onClick={() => dispatch(deleteItemFromCart(cartItem))}>&#10005;</Arrow>
               </Product>
