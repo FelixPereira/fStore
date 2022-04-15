@@ -10,8 +10,8 @@ const CollectionPage = () => {
   const collectionproducts = useSelector(selectSectionProducts(categoryUrl));
   const { categoryName, items } = collectionproducts;
   const {pathname} = useLocation();
-  const productPath = pathname.split('/').filter(path => path !== 'undefined').join('/')
-
+  const productPath = pathname.split('/').filter(path => path !== 'undefined').join('/');
+  
   return(
     <div className='collection-overview'>
       {

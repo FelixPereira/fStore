@@ -1,5 +1,5 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import Item from './item';
+import Item from './Product';
 
 console.log(shallow(< Item />))

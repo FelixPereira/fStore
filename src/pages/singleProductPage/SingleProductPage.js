@@ -39,7 +39,6 @@ const SingleProductPage = () => {
     return itemquantity === 0 ? itemquantity : setitemQuantity(itemquantity - 1);
   };
 
-  console.log(increaseQuantityHandler);
 
   return(
     <ProductPageContainer>

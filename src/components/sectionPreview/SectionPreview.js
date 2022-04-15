@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Item from '../sectionItem/Item';
+import Product from '../product/Product';
 
 import { 
   Container,
@@ -28,7 +28,7 @@ const SectionPreview = ({
           items
           .slice(...(collectionPage ? [0] : [0, 5]))
           .map(item => (
-            <Item item={item} 
+            <Product product={item} 
               key={item.id} 
               categoryUrl={categoryUrl} 
               productPath={productPath} />
