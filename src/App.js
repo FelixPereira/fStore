@@ -15,17 +15,17 @@ import './App.css';
 function App() {
   return (
     <Routes>
-      <Route path='/' element={ <HomePage /> } >
-        <Route path='' element={ <MainContent /> }>
-          <Route path='' element={ <SectionOverview homePage /> } />
-          <Route path='cartpage' element={ <CartPage /> } />
-          <Route path='loja' element={ <ShopPage />} >
-            <Route path='' element={ <SectionOverview /> } />
-            <Route path=':categoryUrl' element={ <CollectionPage /> } >
-              <Route path=':productUrl' element={ <SingleProductPage /> } />
-            </Route>
+      <Route path='' element={ <MainContent /> }>
+        <Route path='/' element={ <HomePage /> } >
+        <Route path='' element={ <SectionOverview homePage /> } />
+        <Route path='cartpage' element={ <CartPage /> } />
+        <Route path='loja' element={ <ShopPage />} >
+          <Route path='' element={ <SectionOverview /> } />
+          <Route path=':categoryUrl' element={ <CollectionPage /> } >
+            <Route path=':productUrl' element={ <SingleProductPage /> } />
           </Route>
-          <Route path='login' element={ <LoginSigninPage /> } />
+        </Route>
+        <Route path='login' element={ <LoginSigninPage /> } />
         </Route>
       </Route>
     </Routes>

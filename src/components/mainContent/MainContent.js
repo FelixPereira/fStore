@@ -6,6 +6,7 @@ import { Outlet } from 'react-router-dom';
 
 import Header from '../header/Header';
 import Backdrop from '../backdrop/Backdrop';
+import SideBar from '../sideBar/SideBar';
 
 import { 
   Container, 
@@ -20,17 +21,18 @@ const Section = () => {
   const displaySidebar = useSelector(selectDisplay);
   return(
     <Container>
-      <Wrapper>
-        { displaySidebar && <Backdrop onClick={() => dispatch(toggleSidebar())} /> }
+      { displaySidebar && <Backdrop onClick={() => dispatch(toggleSidebar())} /> }
 
+      <SideBar />
+      <Wrapper>
         <Header />
         <MainContent>
           <Outlet />
         </MainContent>
       </Wrapper>
-      <Rodape>
-        <RodapeText>Made with LOVE by Félix Pereira</RodapeText>
-      </Rodape>
+        <Rodape>
+          <RodapeText>Made with LOVE by Félix Pereira</RodapeText>
+        </Rodape>
     </Container>
   )
 };

@@ -9,14 +9,14 @@ export const Container = styled.aside`
   justify-content: space-between;
   width: 15rem;
   position: fixed;
-  height: 100%;
+  height: 100vh;
   left: 0;
 
   @media screen and (max-width: 899px) {
     & {
       position: fixed;
       z-index: 2;
-      height: 100%;
+
       transform: translateX(-300%);
       transition: ease-in-out .3s;
     }
