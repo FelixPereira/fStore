@@ -13,20 +13,6 @@ export const Container = styled.div`
   overflow: hidden;
 `;
 
-const scroll = keyframes`
-  0 {
-    transform: translateX(0);
-  }
-
-  50% {
-    transform: translateX(-1090px);
-  }
-
-  100% {
-    transform: translateX(-2180px);
-  }
-`; 
-
 export const Wrapper = styled.div`
   height: 100%;
   width: 5250px;

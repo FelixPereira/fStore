@@ -4,7 +4,7 @@ export const SlideData = [
     title: 'Lorem ipsum',
     description: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet',
     img: '/images/hats.png',
-    bg: '#77757C',
+    bg: '#647881',
     color: '#fff'
   },
   {
@@ -12,7 +12,7 @@ export const SlideData = [
     title: 'Lorem ipsum',
     description: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet',
     img: '/images/jackets.png',
-    bg: '#000',
+    bg: '#0E0C0A',
     color: '#fff'
   },
   {
@@ -20,7 +20,7 @@ export const SlideData = [
     title: 'Lorem ipsum',
     description: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet',
     img: '/images/men.png',
-    bg: '#DDDEE0',
-    color: '#15141A'
+    bg: '#3D4139',
+    color: '#fff'
   }
 ]

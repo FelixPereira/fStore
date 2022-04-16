@@ -38,7 +38,7 @@ const Slide = () => {
                 <Button>Saiba mais</Button>
               </TextContainer>
             <ImageContainer>
-              <Image src={slide.img} />
+              <Image src={slide.img} alt={slide.title} />
             </ImageContainer>
           </SlideContainer>
           ))
