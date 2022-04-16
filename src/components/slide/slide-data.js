@@ -16,11 +16,11 @@ export const SlideData = [
     color: '#fff'
   },
   {
-    subTitle: 'Men',
+    subTitle: 'Sneakers',
     title: 'Lorem ipsum',
     description: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet',
-    img: '/images/men.png',
-    bg: '#3D4139',
+    img: '/images/sneakers.png',
+    bg: '#595959',
     color: '#fff'
   }
-]
+];

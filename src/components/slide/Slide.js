@@ -30,7 +30,7 @@ const Slide = () => {
       <Wrapper index={index}>
         {
           SlideData.map(slide => (
-            <SlideContainer bg={slide.bg} color={slide.color}>
+            <SlideContainer bg={slide.bg} color={slide.color} key={slide.subTitle}>
               <TextContainer>
                 <SubTitle>{slide.subTitle}</SubTitle>
                 <Title>{slide.title}</Title>

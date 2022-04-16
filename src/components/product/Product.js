@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { ReactComponent as HeartIcon } from '../../assets/heart.svg';
 import { ReactComponent as ViewProduct } from '../../assets/eye.svg';
 import { useDispatch } from 'react-redux';

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
+
+import Section from './components/mainContent/MainContent';
 import SectionOverview from './components/sectionOverview/SectionOverview';
-import MainContent from './components/mainContent/MainContent';
 import CollectionPage from './pages/collectionPage/CollectionPage';
 import CartPage from './pages/cartPage/cartPage';
 import HomePage from './pages/homePage/HomePage';
@@ -15,9 +16,8 @@ import './App.css';
 function App() {
   return (
     <Routes>
-      <Route path='' element={ <MainContent /> }>
-        <Route path='/' element={ <HomePage /> } >
-        <Route path='' element={ <SectionOverview homePage /> } />
+      <Route path='/' element={ <Section /> }>
+        <Route path='/' element={ <HomePage /> } />
         <Route path='cartpage' element={ <CartPage /> } />
         <Route path='loja' element={ <ShopPage />} >
           <Route path='' element={ <SectionOverview /> } />
@@ -26,7 +26,6 @@ function App() {
           </Route>
         </Route>
         <Route path='login' element={ <LoginSigninPage /> } />
-        </Route>
       </Route>
     </Routes>
   )

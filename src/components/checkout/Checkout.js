@@ -1,9 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { 
-  selectCartItems, 
-  selectTotal, 
-  selectPriceTotal } from '../../redux/cart/cartSelectors';
+import { selectCartItems, selectTotal } from '../../redux/cart/cartSelectors';
 import { 
   addItemToCart, 
   deleteItemFromCart,
@@ -37,7 +34,6 @@ const Checkout = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartItems);
   const total = useSelector(selectTotal);
-  const priceTotal = useSelector(selectPriceTotal);
 
   return(
     <Container>

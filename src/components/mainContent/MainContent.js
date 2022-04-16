@@ -22,7 +22,6 @@ const Section = () => {
   return(
     <Container>
       { displaySidebar && <Backdrop onClick={() => dispatch(toggleSidebar())} /> }
-
       <SideBar />
       <Wrapper>
         <Header />

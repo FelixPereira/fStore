@@ -1,10 +1,10 @@
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 import CustomButton from '../customButton/CustomButton';
 
 export const Container = styled.div`
   width: 100v2;
   height: 80vh;
-  border: 1px solid #fff;
+  border: 5px solid #2b2040;
   background-color: #ccc;
   display: flex;
   align-items: center;
@@ -33,7 +33,7 @@ export const ArrowContainer = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 2;
+  z-index: 1;
 
   &.right {
     right: 0;
@@ -59,6 +59,9 @@ export const TextContainer = styled.div`
 
 export const SubTitle = styled.strong`
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 13px;
 `;
 
 export const Title = styled.h2`

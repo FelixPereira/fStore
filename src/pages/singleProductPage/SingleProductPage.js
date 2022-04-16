@@ -25,7 +25,7 @@ import {
 const SingleProductPage = () => {
   const { categoryUrl, productUrl } = useParams();
   const shopProduct = useSelector(selectShopProduct(categoryUrl, productUrl));
-  const {name, productImage, price, quantity} = shopProduct;
+  const {name, productImage, price} = shopProduct;
   const dispatch = useDispatch();
   const [ itemquantity, setitemQuantity ] = useState(1);
 
