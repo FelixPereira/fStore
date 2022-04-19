@@ -4,22 +4,23 @@ export const Container = styled.div`
   min-height: 100vh;
   position: absolute;
   right: 0;
-
+  width: 100%;
+  
   @media screen and (min-width: 900px) {
+    & {
+      width: 72%;
+    }
+  }
+
+  @media screen and (min-width: 950px) {
     & {
       width: 75%;
     }
   }
-  
+
   @media screen and (min-width: 1024px) {
     & {
-      width: 80%;
-    }
-  }
-  
-  @media screen and (min-width: 1250px) {
-    & {
-      width: 85%;
+      width: 82%;
     }
   }
 `;

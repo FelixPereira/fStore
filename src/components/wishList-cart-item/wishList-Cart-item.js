@@ -40,7 +40,7 @@ const SmallItem = ({
         <IconsContainer>
           <IconContainer 
             wishlist
-            onClick={() => dispatch(addItemToCart(item))}>
+            onClick={() => dispatch(addItemToCart(item, 1))}>
               <AddToCartIcon className='icon'/>
           </IconContainer>
           <IconContainer 

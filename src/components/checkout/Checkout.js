@@ -9,7 +9,7 @@ import {
 import StripeCheckoutButton from '../stripe/StripeButton';
 import {
   Container,
-  Wrapper,
+  ProductContainer,
   Product,
   ImageContainer,
   Image,
@@ -20,6 +20,7 @@ import {
   Arrow,
   Quantity,
   CheckoutContainer, 
+  Wrapper,
   TotalAmount,
   OrderSummary,
   TotalText,
@@ -37,7 +38,7 @@ const Checkout = () => {
 
   return(
     <Container>
-      <Wrapper>
+      <ProductContainer>
         {
           cartItems.map(cartItem => {
             const {name, price, productImage, quantity} = cartItem;
@@ -60,28 +61,30 @@ const Checkout = () => {
             )
           })
         }
-      </Wrapper>
+      </ProductContainer>
       <CheckoutContainer>
-        <OrderSummary>
-          <TotalText>Total a pagar:</TotalText>
-          <TotalAmount>{total}</TotalAmount>
-        </OrderSummary>
-        <PaymentInfoContainer>
-          {
-            total > 0 ?
-              <>
-                <StripeCheckoutButton price={total} />
+        <Wrapper>
+          <OrderSummary>
+            <TotalText>Total a pagar:</TotalText>
+            <TotalAmount>{total}</TotalAmount>
+          </OrderSummary>
+          <PaymentInfoContainer>
+            {
+              total > 0 ?
+                <>
+                  <StripeCheckoutButton price={total} />
 
-                <PaymentInfo>
-                  <Title>Dados do cartão de crédito para testar o pagamento:</Title>
-                  <CardNumber>Número do cartão: 4242 4242 4242 4242</CardNumber>
-                  <Date>MM / YY: 12/25</Date>
-                  <Cvc>CVC: 123</Cvc>
-                </PaymentInfo>
-              </>
-            : null
-          }          
-        </PaymentInfoContainer>
+                  <PaymentInfo>
+                    <Title>Dados do cartão de crédito para testar o pagamento:</Title>
+                    <CardNumber>Número do cartão: 4242 4242 4242 4242</CardNumber>
+                    <Date>MM / YY: 12/25</Date>
+                    <Cvc>CVC: 123</Cvc>
+                  </PaymentInfo>
+                </>
+              : null
+            }          
+          </PaymentInfoContainer>
+        </Wrapper>
       </CheckoutContainer>
     </Container>
   )

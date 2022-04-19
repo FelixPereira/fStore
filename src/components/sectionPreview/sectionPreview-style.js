@@ -20,22 +20,41 @@ export const StyledLink = styled(Link)`
 
 export const ProductsList = styled.div`
   display: grid;
-  grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+  grid-template-columns: 1fr;
   gap: 30px 15px;
   width: 100%;
+  
+  @media screen and (min-width: 400px) {
+    & {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 
   @media screen and (min-width: 600px) {
     & {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
+
+  @media screen and (min-width: 900px) {
+    & {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media screen and (min-width: 950px) {
+    & {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
   
   @media screen and (min-width: 1024px) {
     & {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
-  
+
   @media screen and (min-width: 1250px) {
     & {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

@@ -7,7 +7,6 @@ export const Container = styled.aside`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 15rem;
   position: fixed;
   height: 100vh;
   left: 0;
@@ -22,26 +21,21 @@ export const Container = styled.aside`
     }
   }
 
-  &.visible {
-    transform: translateX(0);
-  }
-  
   @media screen and (min-width: 900px) {
     & {
-      display: block;
+      width: 28%;
+    }
+  }
+
+  @media screen and (min-width: 950px) {
+    & {
       width: 25%;
     }
   }
-  
+
   @media screen and (min-width: 1024px) {
-  & {
-      width: 20%;
-    }
-  }
-  
-  @media screen and (min-width: 1250px) {
     & {
-      width: 15%;
+      width: 18%;
     }
   }
 `;

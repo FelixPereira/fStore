@@ -25,6 +25,7 @@ export const NavigationMenu = styled.nav`
 export const Wrapper = styled.ul`
   list-style: none;
 `;
+
 export const NavigationItem = styled.li`
   margin-bottom: 0.9375rem;
 `;

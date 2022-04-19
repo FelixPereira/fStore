@@ -23,42 +23,42 @@ const NavigatioMenu = () => {
             <NavLink to='/' style={
               ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
-              <MenuIcon>01</MenuIcon>Home
+              <MenuIcon>&#10095;</MenuIcon>Home
             </NavLink>
           </NavigationItem>
           <NavigationItem>
-            <NavLink to='/loja' className='naviLink' style={
+            <NavLink to='/loja' style={
             ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
           }>
-            <MenuIcon>02</MenuIcon>Loja 
+            <MenuIcon>&#10095;</MenuIcon>Loja 
           </NavLink>
           </NavigationItem>
           <NavigationItem>
-            <NavLink to='/loja/homens' className='naviLink' style={
+            <NavLink to='/loja/homens' style={
               ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
-              <MenuIcon>03</MenuIcon>Masculino 
+              <MenuIcon>&#10095;</MenuIcon>Masculino 
             </NavLink>
           </NavigationItem>
           <NavigationItem>
-            <NavLink to='/loja/mulheres' className='naviLink' style={
+            <NavLink to='/loja/mulheres' style={
               ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
-              <MenuIcon>04</MenuIcon>Feminino
+              <MenuIcon>&#10095;</MenuIcon>Feminino
             </NavLink>
           </NavigationItem>
           <NavigationItem>
-            <NavLink to='#' className='naviLink' style={
+            <NavLink to='#' style={
               ({isActive}) => isActive ? {color: '#b7a3da'} : {color: '#b7a3da'} 
             }>
-              <MenuIcon>06</MenuIcon>Contacto
+              <MenuIcon>&#10095;</MenuIcon>Contacto
             </NavLink>
           </NavigationItem>
           <NavigationItem>
-            <NavLink to='/login' className='naviLink' style={
+            <NavLink to='/login' style={
               ({isActive}) => isActive ? {color: '#fff'} : {color: '#b7a3da'} 
             }>
-              <MenuIcon>07</MenuIcon>Login
+              <MenuIcon>&#10095;</MenuIcon>Login
             </NavLink>
           </NavigationItem>
         </Wrapper>

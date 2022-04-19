@@ -2,18 +2,21 @@ import styled from 'styled-components';
 
 export const IconsContainer = styled.div`
   display: flex;
-  margin-top: 0.625rem;
+  flex-direction: column;
+  justify-content: space-between;
   transform: translateX(12.5rem);
+  height: 100%;
+  z-index: 2;
 `;
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 1.875rem;
   margin-right: 0.625rem;
   overflow: hidden;
+  height: 55px;
 
   &:hover ${IconsContainer} {
     transform: translateY(0);
@@ -28,7 +31,7 @@ export const Product = styled.div`
 
 export const ImgContainer = styled.div`
   width: 30%;
-  margin-right: 25px;
+  margin-right: 18px;
 `;
 
 export const Image = styled.img`

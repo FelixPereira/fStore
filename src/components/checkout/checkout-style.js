@@ -1,32 +1,56 @@
 import styled from 'styled-components';
+import { mobile } from '../../responsive';
 
 export const Container = styled.div`
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  width: 1000px;
   padding-top: 50px;
   margin: 0 auto;
+
+  @media screen and (min-width: 650px) {
+    & {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
 `;
 
-export const Wrapper = styled.div`
-  width: 50%;
+export const ProductContainer = styled.div`
+  width: 100%;
+  margin-bottom: 1.875rem;
+
+
+  @media screen and (min-width: 650px) {
+    & {
+      width: 60%;
+      margin-right: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    & {
+      width: 50%;
+    }
+  }
 `;
 
 export const Product = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   background-color: #fff;
   width: 100%;
-  border-radius: 30px;
-  padding-right: 50px;
+  height: 100px;
+  border-radius: 10px;
+  padding-right: 20px;
 `;
 
 export const ImageContainer = styled.div`
   width: 30%;
-  height: 100px;
+  height: 100%;
   margin-right: 10px;
 `;
 
@@ -40,6 +64,7 @@ export const Image = styled.img`
 export const InfoContainer = styled.div`
   width: 30%;
   margin-right: 10px;
+  padding: 20px 0;
 `;
 
 export const ProductName = styled.h3`
@@ -54,12 +79,8 @@ export const QuantityContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 20%;
+  width: 30%;
   margin-right: 10px;
-`;
-
-export const Arrowt = styled.div`
-  cursor: pointer;
 `;
 
 export const Quantity = styled.div`
@@ -84,13 +105,28 @@ export const Arrow = styled.div`
 `;
 
 export const CheckoutContainer = styled.div`
-  width: 30%;
-  height: 350px;
+  width: 100%;
+  height: 370px;
   background-color: var(--main-color);
   border-radius: 5px;
-  padding: 30px 15px;
   border: solid 1px #fff;
 
+  @media screen and (min-width: 650px) {
+    & {
+      width: 40%;
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    & {
+      width: 30%;
+    }
+  }
+`;
+
+export const Wrapper = styled.div`
+  padding: 30px 15px;
+  min-height: 100%;
 `;
 
 export const TotalAmount = styled.h2`

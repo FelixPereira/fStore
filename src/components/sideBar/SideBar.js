@@ -8,7 +8,6 @@ import WishList  from '../wishList/wishList';
 import NavigationMenu from '../navigationMenu/NavigationMenu';
 
 
-
 const SideBar = ({showSidebar}) => {
   return(
     <Container className={`${showSidebar && 'visible'}`}>
