@@ -1,21 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
   padding: 3.125rem 0 0;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  height: 100%;
 
-  @media screen and (min-width: 43.75rem) {
+  @media screen and (min-width: 700px) {
     & {
       flex-direction: row;
-    }
-  }
-
-  @media screen and (min-width: 78.125rem) {
-    & {
-      width: 62.5rem;
+      justify-content: space-between;
     }
   }
 `;

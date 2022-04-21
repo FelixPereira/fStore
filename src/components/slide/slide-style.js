@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import CustomButton from '../customButton/CustomButton';
 
 export const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 80vh;
   border: 5px solid #2b2040;
   background-color: #ccc;
@@ -10,15 +10,14 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   position: relative;
+  overflow: hidden;
 `;
 
 export const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  width: 5250px;
   display: flex;
-  transform: translateX(${props => props.index * -1090}px);
-  transition: 1.5s ease-in;
+  height: 100%;
+  transform: translateX(${props => props.index * -80}vw);
+  transition: 1.5s ease-in-out;
 `;
 
 export const ArrowContainer = styled.div`
@@ -41,8 +40,7 @@ export const ArrowContainer = styled.div`
 `;
 
 export const SlideContainer = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 80VW;
   display: flex;
   justify-content: space-between;
   background-color: ${props => props.bg};

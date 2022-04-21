@@ -51,7 +51,7 @@ export const ProductInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px 0;
+  padding: 25px 0 15px 0;
   position: relative;
   height: 50%;
 `;

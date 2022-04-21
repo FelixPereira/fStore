@@ -6,7 +6,6 @@ export const Container = styled.aside`
   padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: fixed;
   height: 100vh;
   left: 0;
@@ -33,9 +32,9 @@ export const Container = styled.aside`
     }
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1250px) {
     & {
-      width: 18%;
+      width: 20%;
     }
   }
 `;

@@ -27,23 +27,23 @@ const Slide = () => {
   return(
     <Container>
       <ArrowContainer onClick={scrollLeft}>&#10094;</ArrowContainer>
-      
+      <Wrapper index={index}>
         {
-          SlideData.map(slide => (
-            <SlideContainer bg={slide.bg} color={slide.color} key={slide.subTitle}>
-              <TextContainer>
-                <SubTitle>{slide.subTitle}</SubTitle>
-                <Title>{slide.title}</Title>
-                <Description>{slide.description}</Description>
-                <Button>Saiba mais</Button>
-              </TextContainer>
-            <ImageContainer>
-              <Image src={slide.img} alt={slide.title} />
-            </ImageContainer>
-          </SlideContainer>
+          SlideData.map((slide, idx) => (
+              <SlideContainer bg={slide.bg} color={slide.color} key={slide.subTitle}>
+                <TextContainer>
+                  <SubTitle>{slide.subTitle}</SubTitle>
+                  <Title>{slide.title}</Title>
+                  <Description>{slide.description}</Description>
+                  <Button>Saiba mais</Button>
+                </TextContainer>
+              <ImageContainer>
+                <Image src={slide.img} alt={slide.title} />
+              </ImageContainer>
+            </SlideContainer>
           ))
         }
-      
+      </Wrapper>
       <ArrowContainer className='right' onClick={scrollRight}>&#10095;</ArrowContainer>
     </Container>
   )

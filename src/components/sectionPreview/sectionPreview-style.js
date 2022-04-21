@@ -49,7 +49,7 @@ export const ProductsList = styled.div`
   }
 
   
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1050px) {
     & {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
