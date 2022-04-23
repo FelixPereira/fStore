@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { nineHundred } from '../../responsive';
 
 export const Container = styled.div`
   position: fixed;
@@ -10,9 +11,5 @@ export const Container = styled.div`
   height: 100%;
   width: 100%;
 
-  @media screen and (min-width: 900px) {
-    & {
-      display: none;
-    }
-  }
+  ${nineHundred({display: 'none'})};
 `;

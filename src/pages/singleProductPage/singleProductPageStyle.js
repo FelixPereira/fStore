@@ -1,26 +1,24 @@
 import styled from 'styled-components';
 import CustomButton from './../../components/customButton/CustomButton';
+import { 
+  sixHundred, 
+  sixHundredFiftyFive, 
+  thousand  } from '../../responsive';
 
 export const ProductPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 3.125rem;
   margin: 0 auto;
 
-  @media screen and (min-width: 665px) {
-    flex-direction: row;
-    align-items: conter;
-    justify-content: space-between;
-  }
+  ${sixHundredFiftyFive({
+    flexDirection: 'row',
+    alignItems: 'conter',
+    justifyContent: 'space-between'
+  })};
 
-  @media screen and (min-width: 700px) {
-    width: 600px;
-  }
-
-  @media screen and (min-width: 1000px) {
-    width: 700px;
-  }
+  ${thousand({width: '43.75rem'})};
 `;
 
 export const ProductImageContainer = styled.div`
@@ -28,9 +26,7 @@ export const ProductImageContainer = styled.div`
   border-radius: 0.3125rem;
   margin-bottom: 1.25rem;
 
-  @media screen and (min-width: 600px) {
-    margin-right: 1.875rem;
-  }
+  ${sixHundred({marginRight: '1.875rem'})};
 `;
 
 export const Image = styled.img``;
@@ -45,9 +41,7 @@ export const ProductInfo = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (min-width: 600px) {
-    align-items: flex-start;
-  }
+  ${sixHundred({alignItems: 'flex-start'})};
 `;
 
 export const ProductName = styled.h1`
@@ -67,17 +61,17 @@ export const QuantityContainer = styled.div`
   align-items: center;
   margin-bottom: 1.5625rem;
 
-  @media screen and (min-width: 600px) {
-    margin-bottom: 0;
-    margin-right: 0.625rem;
-  }
+  ${sixHundred({
+    marginBottom: 0,
+    marginRight: '0.625rem'
+  })};
 `;
 
 export const ArrowContainer = styled.div`
   color: #fff;
-  border: solid 1px #fff;
-  width: 40px;
-  height: 30px;
+  border: solid 0.0625rem #fff;
+  width: 2.5rem;
+  height: 1.875rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,9 +91,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: 600px) {
-    flex-direction: row;
-  }
+  ${sixHundred({flexDirection: 'row'})};
 `;
 
 export const ButtonsContainer = styled.div`

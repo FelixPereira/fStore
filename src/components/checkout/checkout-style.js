@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { mobile } from '../../responsive';
+import { sixHundredFifty, thousandHundred } from '../../responsive';
 
 export const Container = styled.div`
   display: flex;
@@ -9,11 +9,7 @@ export const Container = styled.div`
   padding-top: 50px;
   margin: 0 auto;
 
-  @media screen and (min-width: 650px) {
-    & {
-      flex-direction: row;
-      align-items: flex-start;
-    }
+  ${sixHundredFifty({flexDirection: 'row', alignItems: 'flex-start'})};
 
 `;
 
@@ -21,19 +17,8 @@ export const ProductContainer = styled.div`
   width: 100%;
   margin-bottom: 1.875rem;
 
-
-  @media screen and (min-width: 650px) {
-    & {
-      width: 60%;
-      margin-right: 20px;
-    }
-  }
-
-  @media screen and (min-width: 1100px) {
-    & {
-      width: 50%;
-    }
-  }
+  ${sixHundredFifty({width: '60%', marginRight: '20px'})};
+  ${thousandHundred({width: '50%'})};
 `;
 
 export const Product = styled.div`
@@ -111,17 +96,8 @@ export const CheckoutContainer = styled.div`
   border-radius: 5px;
   border: solid 1px #fff;
 
-  @media screen and (min-width: 650px) {
-    & {
-      width: 40%;
-    }
-  }
-
-  @media screen and (min-width: 1100px) {
-    & {
-      width: 30%;
-    }
-  }
+  ${sixHundredFifty({width: '40%'})};
+  ${thousandHundred({width: '30%'})};
 `;
 
 export const Wrapper = styled.div`

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import CustomButton from '../customButton/CustomButton';
+import { nineHundred } from '../../responsive';
 
 export const Container = styled.div`
-  height: 90vh;
+  height: 80vh;
   border: 5px solid #2b2040;
   display: flex;
   align-items: center;
@@ -22,7 +23,7 @@ export const Overlay = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   height: 100%;
-  transform: translateX(${props => props.index * -90}vw);
+  transform: translateX(${props => props.index * -100}vw);
   transition: 1.5s ease-in-out;
   position: absolute;
   left: 0;
@@ -48,7 +49,7 @@ export const ArrowContainer = styled.div`
 `;
 
 export const SlideContainer = styled.div`
-  width: 90vw;
+  width: 100vw;
   max-heiht: 100%;
   background: url(${props => props.bgImage});
   background-repeat: no-repeat;
@@ -57,15 +58,16 @@ export const SlideContainer = styled.div`
   color: ${props => props.color};
   display: flex;
   align-items: center;
-  padding: 20px 0;
+  padding: 0 0 0 80px;
 `;
 
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 60%;
   z-index: 1;
-  margin-left: 100px;
+
+  ${nineHundred({width: '50%'})};
 `;
 
 export const SubTitle = styled.strong`

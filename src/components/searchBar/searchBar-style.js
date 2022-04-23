@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { nineHundred } from '../../responsive';
 
 export const Container = styled.div`
   background-color: #2c2b31;
@@ -11,11 +12,7 @@ export const Container = styled.div`
   border-radius: 10px;
   margin-right: 1.25rem;
 
-  @media screen and (min-width: 900px) {
-    & {
-      width: 40%;
-    }
-  }
+  ${nineHundred({width: '40%'})};
 `;
 
 export const Input = styled.input`

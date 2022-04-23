@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { 
+  fourHundred,
+  sixHundredFifty,
+  nineHundred, 
+  nineHundredFifty,
+  thousandTwoHundredFifty } from '../../responsive';
 
 export const Container = styled.div`
   padding: 50px 0 0;
@@ -23,42 +29,11 @@ export const ProductsList = styled.div`
   grid-template-columns: 1fr;
   gap: 30px 15px;
   width: 100%;
-  
-  @media screen and (min-width: 400px) {
-    & {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
 
-  @media screen and (min-width: 600px) {
-    & {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
-
-  @media screen and (min-width: 900px) {
-    & {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  @media screen and (min-width: 950px) {
-    & {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
-
-  
-  @media screen and (min-width: 1050px) {
-    & {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-  }
-
-  @media screen and (min-width: 1250px) {
-    & {
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-  }
+  ${fourHundred({gridTemplateColumns: '1fr 1fr'})};
+  ${sixHundredFifty({gridTemplateColumns: '1fr 1fr 1fr'})};
+  ${nineHundred({gridTemplateColumns: '1fr 1fr'})};
+  ${nineHundredFifty({gridTemplateColumns: '1fr 1fr 1fr 1fr'})};
+  ${thousandTwoHundredFifty({gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr'})};
 `;
 

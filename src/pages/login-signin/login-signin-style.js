@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { sevenHundred } from '../../responsive';
 
 export const Container = styled.div`
   padding: 3.125rem 0 0;
@@ -7,12 +8,10 @@ export const Container = styled.div`
   flex-direction: column;
   height: 100%;
 
-  @media screen and (min-width: 700px) {
-    & {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
+  ${sevenHundred({
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  })};
 `;
 
 export const Wrapper = styled.div`
@@ -22,16 +21,7 @@ export const Wrapper = styled.div`
     margin-bottom: 3.125rem;
   }
 
-  @media screen and (min-width: 43.75rem) {
-    & {
-    width: 48%;
-    }
-  
-    &.login {
-      margin-right: 1.875rem;
-      margin-bottom: 0;
-    }
-  }
+  ${sevenHundred({width: '48%'})};
 `;
 
 export const FormHeader = styled.div`
