@@ -15,26 +15,26 @@ export const Container = styled.aside`
       position: fixed;
       z-index: 2;
 
-      transform: translateX(-300%);
+      transform: translateX(-300vw);
       transition: ease-in-out .3s;
     }
   }
 
   @media screen and (min-width: 900px) {
     & {
-      width: 28%;
+      width: 28vw;
     }
   }
 
   @media screen and (min-width: 950px) {
     & {
-      width: 25%;
+      width: 25vw;
     }
   }
 
   @media screen and (min-width: 1250px) {
     & {
-      width: 20%;
+      width: 20vw;
     }
   }
 `;

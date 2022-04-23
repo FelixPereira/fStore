@@ -4,29 +4,29 @@ export const Container = styled.div`
   min-height: 100vh;
   position: absolute;
   right: 0;
-  width: 100%;
+  width: 100vw;
   
   @media screen and (min-width: 900px) {
     & {
-      width: 72%;
+      width: 72vw;
     }
   }
 
   @media screen and (min-width: 950px) {
     & {
-      width: 75%;
+      width: 75vw;
     }
   }
 
   @media screen and (min-width: 1250px) {
     & {
-      width: 80%;
+      width: 80vw;
     }
   }
 `;
 
 export const Wrapper = styled.div`
-  padding: 30px;
+  padding: 30px 30px 30px 30px;
 `;
 
 export const MainContent = styled.main``;

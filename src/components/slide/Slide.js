@@ -10,8 +10,7 @@ import {
   Title,
   Description,
   Button,
-  ImageContainer,
-  Image } from './slide-style';
+  Overlay } from './slide-style';
 
 const Slide = () => {
   const [index, setIndex] = useState(0);
@@ -28,18 +27,16 @@ const Slide = () => {
     <Container>
       <ArrowContainer onClick={scrollLeft}>&#10094;</ArrowContainer>
       <Wrapper index={index}>
+        <Overlay />
         {
           SlideData.map((slide, idx) => (
-              <SlideContainer bg={slide.bg} color={slide.color} key={slide.subTitle}>
+              <SlideContainer bgImage={slide.img}  color={slide.color} key={slide.subTitle}>
                 <TextContainer>
                   <SubTitle>{slide.subTitle}</SubTitle>
                   <Title>{slide.title}</Title>
                   <Description>{slide.description}</Description>
                   <Button>Saiba mais</Button>
                 </TextContainer>
-              <ImageContainer>
-                <Image src={slide.img} alt={slide.title} />
-              </ImageContainer>
             </SlideContainer>
           ))
         }
