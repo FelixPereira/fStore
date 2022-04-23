@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import CustomButton from '../customButton/CustomButton';
-import { nineHundred } from '../../responsive';
+import { nineHundred, sevenHundred } from '../../responsive';
 
 export const Container = styled.div`
-  height: 80vh;
+  height: 70vh;
   border: 5px solid #2b2040;
   display: flex;
   align-items: center;
@@ -58,7 +58,9 @@ export const SlideContainer = styled.div`
   color: ${props => props.color};
   display: flex;
   align-items: center;
-  padding: 0 0 0 80px;
+  padding: 0 0 0 70px;
+
+  ${sevenHundred({padding: ' 0 40px 0 100px'})};
 `;
 
 export const TextContainer = styled.div`
@@ -67,6 +69,7 @@ export const TextContainer = styled.div`
   width: 60%;
   z-index: 1;
 
+  ${sevenHundred({width: '80%'})};
   ${nineHundred({width: '50%'})};
 `;
 
@@ -78,12 +81,13 @@ export const SubTitle = styled.strong`
 `;
 
 export const Title = styled.h2`
-  font-size: 2.8125rem;
+  font-size: 35px;
   margin-bottom: 1rem;
+  word-wrap: no-wrap;
 `;
   
   export const Description = styled.p`
-  font-size: 1.25rem;
+  font-size: 17px;
   line-height: 1.3;
   margin-bottom: 1.5rem;
 `;

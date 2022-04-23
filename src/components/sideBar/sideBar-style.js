@@ -16,12 +16,16 @@ export const Container = styled.aside`
   left: 0;
 
   ${eightHundredNinetyNine({
+    width: '250px',
     position: 'fixed', 
     zIndex: '2', 
-    transform: 
-    'translateX(-300vw)', 
+    transform: `translateX(${props => props.show})`, 
     transition: 'ease-in-out .3s'})};
   ${nineHundred({width: '28vw'})};
   ${nineHundredFifty({width: '25vw'})};
   ${thousandTwoHundredFifty({width: '20vw'})};
+
+  @media screen and (max-width: 899px) {
+    transform: translateX(${props => props.show})
+  }
 `;

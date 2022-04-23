@@ -1,6 +1,5 @@
 import React from 'react';
-import { createStructuredSelector } from 'reselect';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { selectDisplay } from '../../redux/sidebar/sidebarSelector';
 import { Container } from './sideBar-style.js';
 
@@ -8,17 +7,15 @@ import WishList  from '../wishList/wishList';
 import NavigationMenu from '../navigationMenu/NavigationMenu';
 
 
-const SideBar = ({showSidebar}) => {
+const SideBar = () => {
+  const showSidebar = useSelector(selectDisplay);
+  const show = showSidebar ? 0 : '-300vw';
   return(
-    <Container className={`${showSidebar && 'visible'}`}>
+    <Container show={show}>
       <NavigationMenu />
       <WishList />
     </Container>
   )
 }
 
-const mapStateToProps = createStructuredSelector({
-  showSidebar: selectDisplay
-});
-
-export default connect(mapStateToProps)(SideBar);
+export default SideBar;
