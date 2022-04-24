@@ -24,14 +24,14 @@ import IconContainer from '../icon/Icon';
 
 const Product = ({product, categoryUrl, productPath}) => {
   const {name, price, productImage} = product;
+  const dispatch = useDispatch();
   const formatedName = name
     .split(' ')
     .join('-')
     .toLowerCase();
-  const dispatch = useDispatch();
   const productUrl = `${categoryUrl}/${formatedName}`
     .split('/')
-    .filter(a => a !== 'undefined')
+    .filter(url => url !== 'undefined')
     .join('/');
 
   return(

@@ -84,12 +84,16 @@ export const Title = styled.h2`
   font-size: 35px;
   margin-bottom: 1rem;
   word-wrap: no-wrap;
+
+  ${sevenHundred({fontSize: '45px'})};
 `;
   
   export const Description = styled.p`
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.3;
   margin-bottom: 1.5rem;
+
+  ${sevenHundred({fontSize: '20px'})};
 `;
 
 export const Button = styled(CustomButton)`
